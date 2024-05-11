@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now - Little Juneberry Ensembles</title>
+    <style>
+        /* Add your custom CSS styles here */
+        body {
+            background-image: url("Juneberry.JPG"); /* Replace with your actual image path */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            /* Additional styling for readability */
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            color: #333; /* Adjust color to match your branding */
+        }
+        .contact-info {
+            margin: 20px;
+        }
+        .contact-info a {
+            text-decoration: none;
+            color: #007bff; /* Link color */
+        }
+    </style>
+</head>
+<body>
+    <h2>Book Now</h2>
+    <form action="process_booking.php" method="post">
+        <fieldset>
+            <legend>Contact Information</legend>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message"></textarea>
+        </fieldset>
+        <input type="submit" value="Submit Booking">
+    </form>
+</body>
+</html>
+

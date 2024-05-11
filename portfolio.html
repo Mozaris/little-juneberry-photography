@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Photography Portfolio - Little Juneberry Photography</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"> <!-- Google Fonts -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lato', sans-serif; /* Consistent font across pages */
+            background: #f5f5f5; /* Light gray background */
+        }
+
+        /* Header styling */
+        .header-container {
+            background: #333; /* Dark background */
+            color: white; /* White text */
+            padding: 20px; /* Padding around the content */
+            text-align: center; /* Centered content */
+        }
+
+        .separator-horizontal {
+            height: 2px;
+            background: white;
+            width: 100%;
+            margin: 10px 0; /* Space around the separator */
+        }
+
+        .nav-links {
+            list-style-type: none; /* No bullets */
+            padding: 0;
+            margin: 0;
+            display: flex; /* Horizontal menu */
+            justify-content: center; /* Center the navigation */
+            gap: 20px; /* Even spacing between links */
+            position: relative; /* Position context for dropdown */
+        }
+
+        .nav-links a {
+            text-decoration: none; /* No underlines */
+            color: white; /* White text */
+            transition: color 0.3s; /* Smooth hover effect */
+        }
+
+        .nav-links a:hover {
+            color: #007bff; /* Highlight color on hover */
+        }
+
+        .nav-links .dropdown {
+            position: relative; /* Required for dropdown positioning */
+        }
+
+        .dropdown-content {
+            display: none; /* Hidden by default */
+            position: absolute; /* Absolute positioning */
+            background: #333; /* Same as header background */
+            color: white; /* Same as text color */
+            min-width: 120px; /* Minimum width for dropdown */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            border-radius: 5px; /* Rounded corners */
+            z-index: 1; /* Ensures it appears above other elements */
+            padding: 10px; /* Padding for dropdown */
+        }
+
+        .dropdown-content a {
+            text-decoration: none; /* No underlines */
+            color: white; /* White text */
+            display: block; /* Make each link a block */
+            padding: 8px; /* Padding for links */
+            transition: color 0.3s; /* Smooth hover effect */
+        }
+
+        .dropdown-content a:hover {
+            color: #007bff; /* Highlight color on hover */
+        }
+
+        .nav-links .dropdown:hover .dropdown-content {
+            display: block; /* Show the dropdown on hover */
+        }
+
+        .portfolio-container {
+            max-width: 1200px; /* Fixed width for layout consistency */
+            margin: auto; /* Center the container */
+            padding: 20px; /* Padding around the content */
+            background-color: white; /* White background for contrast */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        .masonry-grid {
+            column-count: 3; /* Masonry layout with 3 columns */
+            column-gap: 20px; /* Gap between columns */
+        }
+
+        .portfolio-item {
+            break-inside: avoid; /* Prevent breaking within portfolio items */
+            margin-bottom: 20px; /* Vertical spacing */
+        }
+
+        .portfolio-item img {
+            width: 100%; /* Full width */
+            height: auto; /* Maintain aspect ratio */
+            object-fit: cover; /* Cover the space */
+            transition: transform 0.3s; /* Smooth hover effect */
+        }
+
+        .portfolio-item img:hover {
+            transform: scale(1.05); /* Zoom effect on hover */
+        }
+
+        .contact-box {
+            background: #ccc; /* Light gray background for contrast */
+            padding: 40px; /* Extra padding for the contact section */
+            text-align: center; /* Centered content */
+            margin-top: 20px; /* Separate from portfolio items */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        .contact-button a {
+            padding: 12px 24px; /* Padding for the button */
+            background: #333; /* Dark background */
+            color: white; /* White text */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            text-decoration: none; /* No underlines */
+            font-size: 1.1em; /* Slightly larger font */
+            transition: background-color 0.3s; /* Smooth hover effect */
+        }
+
+        .contact-button a:hover {
+            background: #444; /* Darker on hover */
+        }
+
+        footer {
+            background: #333; /* Dark background */
+            color: white; /* White text */
+            text-align: center; /* Centered content */
+            padding: 20px; /* Padding around the content */
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            .masonry-grid {
+                column-count: 2; /* Reduce to two columns for smaller screens */
+            }
+
+            .nav-links {
+                flex-direction: column; /* Vertical navigation */
+                gap: 10px; /* Reduced spacing for smaller screens */
+            }
+
+            .dropdown-content {
+                position: static; /* Adjust dropdown positioning */
+                box-shadow: none; /* Remove shadow for narrower screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .masonry-grid {
+                column-count: 1; /* Single column for narrower screens */
+            }
+
+            .nav-links {
+                gap: 5px; /* Further reduced spacing */
+            }
+
+            .contact-box {
+                padding: 30px; /* Reduced padding for smaller screens */
+            }
+
+            .contact-button a {
+                padding: 10px 20px; /* Smaller button for narrower screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container"> <!-- Top navigation with logo -->
+            <h1>Little Juneberry Photography</h1> <!-- Website logo -->
+            <!-- Separator lines -->
+            <div class="separator-horizontal"></div>
+            <nav>
+                <ul class="nav-links"> <!-- Navigation links -->
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown"> <!-- Dropdown menu for Services -->
+                        <a href="#">Services</a> <!-- Hover to show dropdown -->
+                        <ul class="dropdown-content"> <!-- Dropdown content -->
+                            <li><a href="wedding.html">Wedding</a></li>
+                            <li><a href="engagement.html">Engagement</a></li>
+                            <li><a href="family.html">Family</a></li>
+                            <li><a href="special-occasion.html">Special Occasion</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="separator-horizontal"></div> <!-- Bottom separator -->
+        </div>
+    </header>
+
+    <div class="portfolio-container"> <!-- Main container for the portfolio -->
+        <h2>Photography Portfolio</h2> <!-- Portfolio title -->
+        <div class="masonry-grid"> <!-- Staggered three-column layout -->
+            <!-- Portfolio items -->
+            <div class="portfolio-item">
+                <img src="Portfolio1.jpg" alt="Portfolio Image 1"> <!-- Image 1 -->
+            </div>
+            <div class="portfolio-item">
+                <img src="Portfolio2.jpg" alt="Portfolio Image 2"> <!-- Image 2 -->
+            </div>
+            <div class="portfolio-item">
+                <img src="Portfolio3.jpg" alt="Portfolio Image 3"> <!-- Image 3 -->
+            </div>
+            <div class="portfolio-item">
+                <img src="Portfolio4.jpg" alt="Portfolio Image 4"> <!-- Image 4 -->
+            </div>
+            <div class="portfolio-item">
+                <img src="Portfolio5.jpg" alt="Portfolio Image 5"> <!-- Image 5 -->
+            </div>
+            <div class="portfolio-item">
+                <img src="Portfolio6.jpg" alt="Portfolio Image 6"> <!-- Image 6 -->
+            </div>
+            <div class="portfolio-item">
+                <img src="Portfolio7.jpg" alt="Portfolio Image 7"> <!-- Image 7 -->
+            </div>
+            <div class="portfolio-item">
+                <img src="Portfolio8.jpg" alt="Portfolio Image 8"> <!-- Image 8 -->
+            </div>
+            <div class="portfolio-item">
+                <img src="Portfolio9.jpg" alt="Portfolio Image 9"> <!-- Image 9 -->
+            </div>
+            <div class="portfolio-item">
+                <img src="Portfolio10.jpg" alt="Portfolio Image 10"> <!-- Image 10 -->
+            </div>
+
+            <!-- Contact section in a distinct gray box -->
+            <div class="contact-box"> <!-- Grey divider with centered button -->
+                <h3>Need to get in touch?</h3>
+                <div class="contact-button"> <!-- Centered contact button -->
+                    <a href="contact.html">Get in touch</a> <!-- Button link -->
+                </div>
+            </div>
+
+            <!-- Additional portfolio items -->
+            <div class="portfolio-item">
+                <img src="Portfolio20.jpg" alt="Portfolio Image 11"> <!-- Image 11 -->
+            </div>
+            <div class="portfolio-item">
+                <img src="Portfolio12.jpg" alt="Portfolio Image 12"> <!-- Image 12 -->
+            </div>
+            <div class="portfolio-item">
+                <img src="Portfolio13.jpg" alt="Portfolio Image 13"> <!-- Image 13 -->
+            </div>
+            <div class="portfolio-item">
+                <img src="Portfolio14.jpg" alt="Portfolio Image 14"> <!-- Image 14 -->
+            </div>
+            <div class="portfolio-item">
+                <img src="Portfolio15.jpg" alt="Portfolio Image 15"> <!-- Image 15 -->
+            </div>
+            <div class="portfolio-item">
+                <img src="Portfolio16.jpg" alt="Portfolio Image 16"> <!-- Image 16 -->
+            </div>
+            <div class="portfolio-item">
+                <img src="Portfolio17.jpg" alt="Portfolio Image 17"> <!-- Image 17 -->
+            </div>
+            <div class="portfolio-item">
+                <img src="Portfolio18.jpg" alt="Portfolio Image 18"> <!-- Image 18 -->
+            </div>
+            <div class="portfolio-item">
+                <img src="Portfolio19.jpg" alt="Portfolio Image 19"> <!-- Image 19 -->
+            </div>
+            <div class="portfolio-item">
+                <img src="Portfolio11.jpg" alt="Portfolio Image 20"> <!-- Image 20 -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content"> <!-- Footer with consistent text -->
+            &copy; 2024 Little Juneberry Photography. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+

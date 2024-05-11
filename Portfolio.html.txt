@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Little Juneberry Ensembles</title>
+</head>
+<body>
+    <h2>Portfolio</h2>
+    <!-- Add a button to toggle visibility of portfolio categories -->
+    <button id="togglePortfolio">Show Portfolio Categories</button>
+
+    <!-- Wedding Category -->
+    <section id="wedding" class="portfolio-category">
+        <h3>Wedding Photography</h3>
+        <div class="portfolio-item">
+            <img src="path/to/wedding-image1.jpg" alt="Wedding Photo 1">
+            <p>Capturing beautiful moments on your special day.</p>
+        </div>
+        <!-- Add more wedding portfolio items as needed -->
+    </section>
+
+    <!-- Repeat similar sections for other categories -->
+    <!-- Engagement, Family, Special Occasions -->
+
+    <script>
+        // JavaScript to toggle visibility of portfolio categories
+        const toggleButton = document.getElementById('togglePortfolio');
+        const portfolioCategories = document.querySelectorAll('.portfolio-category');
+
+        toggleButton.addEventListener('click', () => {
+            portfolioCategories.forEach(category => {
+                category.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

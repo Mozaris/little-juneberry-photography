@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Little Juneberry Photography</title>
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"> <!-- Google Fonts -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lato', sans-serif;
+            background: #f5f5f5;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Horizontal separator under the header */
+        .separator-horizontal {
+            height: 2px;
+            background: white;
+            width: 100%;
+            margin-bottom: 20px; /* Space below separator */
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #007bff; /* Highlight color on hover */
+        }
+
+        /* Media queries for smaller screens */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column; /* Vertical navigation for smaller screens */
+                text-align: center;
+            }
+
+            .container {
+                padding: 15px; /* Reduced padding for smaller screens */
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+            margin: auto; /* Center the container */
+            display: flex;
+            justify-content: center; /* Center-align content */
+        }
+
+        /* Slides within the slideshow */
+        .mySlides {
+            display: none; /* Hide all slides initially */
+            text-align: center; /* Ensure content is centered */
+        }
+
+        .image-box {
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            width: 100%; /* Ensure images are responsive */
+            max-width: 600px; /* Limit max width for images */
+        }
+
+        .image-box img {
+            width: 100%; /* Full width */
+            height: auto; /* Maintain aspect ratio */
+            object-fit: cover;
+            transition: transform 0.3s; /* Smooth hover effect */
+        }
+
+        .image-box img:hover {
+            transform: scale(1.05); /* Hover effect */
+        }
+
+        /* Description below the slideshow */
+        .description {
+            text-align: center;
+            font-size: 1em; /* Default font size */
+            color: #333; /* Text color */
+            margin-top: 10px; /* Space above the description */
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .social-icons {
+            text-align: center;
+            margin-top: 20px; /* Space above social icons */
+        }
+
+        .social-icons a {
+            color: #333;
+            font-size: 1.5em; /* Icon size */
+            margin: 0 10px; /* Space between icons */
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #007bff; /* Highlight color on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with navigation -->
+    <header>
+        <div class="header-container">
+            <h1>Little Juneberry Photography</h1> <!-- Header text -->
+            <nav>
+                <ul class="nav-links"> <!-- Navigation links -->
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#">Services</a> <!-- Dropdown with sub-links -->
+                        <ul class="dropdown-content">
+                            <li><a href="wedding.html">Wedding</a></li>
+                            <li><a href="engagement.html">Engagement</a></li>
+                            <li><a href="family.html">Family</a></li>
+                            <li><a href="special-occasion.html">Special Occasion</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="separator-horizontal"></div> <!-- Horizontal separator -->
+    </header>
+
+    <!-- Main content area -->
+    <div class="container">
+        <main>
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+                <!-- Slide 1 -->
+                <div class="mySlides">
+                    <div class="image-box">
+                        <img src="Portfolio6.jpg" alt="Slideshow image 1"> <!-- Slide image -->
+                    </div>
+                    <div class="description">Capturing life's greatest moments.</div> <!-- Description under image -->
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="mySlides">
+                    <div class="image-box">
+                        <img src="Portfolio12.jpg" alt="Slideshow image 2"> <!-- Slide image -->
+                    </div>
+                    <div class="description">Capturing life's greatest moments.</div> <!-- Description under image -->
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="mySlides">
+                    <div class="image-box">
+                        <img src="Portfolio7.jpg" alt="Slideshow image 3"> <!-- Slide image -->
+                    </div>
+                    <div class="description">Capturing life's greatest moments.</div> <!-- Description under image -->
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="mySlides">
+                    <div class="image-box">
+                        <img src="Portfolio17.jpg" alt="Slideshow image 4"> <!-- Slide image -->
+                    </div>
+                    <div class="description">Capturing life's greatest moments.</div> <!-- Description under image -->
+                </div>
+            </div>
+            
+            <!-- Section with text description -->
+            <section class="about-photographer">
+                <h2>Welcome to Little Juneberry Photography</h2> <!-- Centered heading -->
+                <p>I'm Allie, a photographer based in Fargo, North Dakota, specializing in Weddings, Engagements, Family, and Special Occasions.</p>
+                <p>Explore my portfolio and contact me to discuss your photography needs. I look forward to working with you!</p>
+            </section>
+        </main>
+
+        <!-- Social media icons -->
+        <div class="social-icons"> <!-- Links to social media -->
+            <a href="https://www.instagram.com/littlejuneberryphotography/">
+                <i class="fab fa-instagram"></i> <!-- Instagram icon -->
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100094520224957&mibextid=LQQJ4d">
+                <i class="fab fa-facebook-f"></i> <!-- Facebook icon -->
+            </a>
+        </div>
+        
+        <!-- Footer -->
+        <footer>
+            &copy; 2024 Little Juneberry Photography. All rights reserved. <!-- Copyright text -->
+        </footer>
+    </div> <!-- End of container -->
+
+    <!-- JavaScript for slideshow -->
+    <script>
+    let slideIndex = 0; // Current slide index
+
+    function showSlides() { // Display each slide in turn
+        let slides = document.getElementsByClassName("mySlides");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none"; // Hide all slides initially
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1; // Loop back to first slide
+        }
+        slides[slideIndex - 1].style.display = "block"; // Display current slide
+        setTimeout(showSlides, 2000); // Auto-cycle every 2 seconds
+    }
+
+    showSlides(); // Initialize the slideshow
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
