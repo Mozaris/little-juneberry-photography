@@ -2,136 +2,91 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Little Juneberry Photography</title>
-    <link rel="stylesheet" type="text/css" href="style.css"> <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"> <!-- Google Fonts -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Add viewport meta tag -->
+    <title>Little Juneberry Photography - Fargo, North Dakota</title> <!-- Improved title with location -->
+    <meta name="description" content="Little Juneberry Photography specializes in capturing life's greatest moments in Fargo, North Dakota. Explore our portfolio for wedding, engagement, family, and special occasion photography."> <!-- Improved meta description -->
+
+    <!-- External CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
+
     <style>
+        /* Your CSS styles */
         body {
+            font-family: 'Lato', sans-serif;
             margin: 0;
             padding: 0;
-            font-family: 'Lato', sans-serif;
-            background: #f5f5f5;
         }
-
         header {
-            background: #333;
-            color: white;
-            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
             text-align: center;
         }
-
-        /* Horizontal separator under the header */
-        .separator-horizontal {
-            height: 2px;
-            background: white;
-            width: 100%;
-            margin-bottom: 20px; /* Space below separator */
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
         }
-
-        .nav-links {
-            list-style: none;
+        h1 {
+            margin: 0;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center;
-            gap: 20px;
+            flex-wrap: wrap; /* Allow navigation links to wrap to the next line */
+            justify-content: center; /* Center align the links */
         }
-
-        .nav-links a {
-            color: white;
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
             text-decoration: none;
-            transition: color 0.3s;
         }
-
-        .nav-links a:hover {
-            color: #007bff; /* Highlight color on hover */
-        }
-
-        /* Media queries for smaller screens */
-        @media (max-width: 768px) {
-            .nav-links {
-                flex-direction: column; /* Vertical navigation for smaller screens */
-                text-align: center;
-            }
-
-            .container {
-                padding: 15px; /* Reduced padding for smaller screens */
-            }
-        }
-
         .container {
-            max-width: 1200px;
-            margin: auto;
             padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
         }
-
-        /* Slideshow container */
         .slideshow-container {
             position: relative;
             max-width: 100%;
-            overflow: hidden;
-            margin: auto; /* Center the container */
-            display: flex;
-            justify-content: center; /* Center-align content */
+            margin-bottom: 20px;
         }
-
-        /* Slides within the slideshow */
         .mySlides {
-            display: none; /* Hide all slides initially */
-            text-align: center; /* Ensure content is centered */
+            display: none;
         }
-
-        .image-box {
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
-            width: 100%; /* Ensure images are responsive */
-            max-width: 600px; /* Limit max width for images */
-        }
-
         .image-box img {
-            width: 100%; /* Full width */
-            height: auto; /* Maintain aspect ratio */
-            object-fit: cover;
-            transition: transform 0.3s; /* Smooth hover effect */
+            width: 100%;
+            height: auto;
         }
-
-        .image-box img:hover {
-            transform: scale(1.05); /* Hover effect */
-        }
-
-        /* Description below the slideshow */
         .description {
             text-align: center;
-            font-size: 1em; /* Default font size */
-            color: #333; /* Text color */
-            margin-top: 10px; /* Space above the description */
+            margin-top: 10px;
         }
-
-        footer {
-            background: #333;
-            color: white;
-            padding: 20px;
+        .about-photographer {
             text-align: center;
+            margin-bottom: 20px;
         }
-
         .social-icons {
             text-align: center;
-            margin-top: 20px; /* Space above social icons */
+            margin-bottom: 20px;
         }
-
         .social-icons a {
+            margin-right: 10px;
             color: #333;
-            font-size: 1.5em; /* Icon size */
-            margin: 0 10px; /* Space between icons */
-            transition: color 0.3s;
+            text-decoration: none;
         }
-
-        .social-icons a:hover {
-            color: #007bff; /* Highlight color on hover */
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: #fff;
         }
     </style>
 </head>
