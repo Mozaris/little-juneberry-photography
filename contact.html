@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact - Allie Eastwood</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Little Juneberry Photography</title>
+    <meta name="description" content="Contact Little Juneberry Photography for inquiries about our services. Reach out via email or follow us on social media.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Font Awesome -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"> <!-- Google Fonts -->
     <style>
+        /* Your CSS styles */
         body {
             margin: 0;
             padding: 0;
@@ -16,8 +19,7 @@
             background-attachment: fixed;
         }
 
-        /* Header styling from portfolio page */
-        .header-container {
+        header {
             background: #333;
             color: white;
             padding: 20px;
@@ -203,16 +205,16 @@
     <div class="contact-container">
         <div class="contact-header">
             <h2>Contact Us</h2>
-            <p>We're here to help! Feel free to reach out via email or follow us on social media.</p>
+            <p>Reach out to Little Juneberry Photography for inquiries about our services. We're here to help!</p>
         </div>
 
         <div class="contact-info">
-            <p>Email: <a href="mailto:Allie_Tatarek@hotmail.com">Allie_Tatarek@hotmail.com</a></p>
+            <p>Email: <a href="mailto:contact@littlejuneberryphotography.com">contact@littlejuneberryphotography.com</a></p>
         </div>
 
         <div class="social-icons">
             <a href="https://www.instagram.com/littlejuneberryphotography/"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=100094520224957"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.facebook.com/littlejuneberryphotography/"><i class="fab fa-facebook-f"></i></a>
         </div>
 
         <div class="contact-form" id="contact">
@@ -224,11 +226,11 @@
                 </div>
                 <div class="form-group">
                     <label for="last-name">Last Name*</label>
-                    <input type="text" id="last-name" name="first-name" required>
+                    <input type="text" id="last-name" name="last-name" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email*</label>
-                    <input type="email" name="email" required>
+                    <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-group">
                     <label for="service-interest">What service are you interested in?*</label>
@@ -241,8 +243,9 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="how-hear">How did you hear about me?*</label>
+                    <label for="how-hear">How did you hear about us?*</label>
                     <select id="how-hear" name="how-hear" required>
+                        <option value="">Select</option>
                         <option value="internet">Internet Search</option>
                         <option value="social-media">Social Media</option>
                         <option value="referral">Referral</option>
@@ -251,7 +254,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="more-info">Let Me Know All the Details!</label>
+                    <label for="more-info">Let Us Know All the Details!</label>
                     <textarea id="more-info" name="more-info" rows="4" required></textarea>
                 </div>
                 <button type="submit">Submit</button>
