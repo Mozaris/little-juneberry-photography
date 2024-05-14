@@ -31,17 +31,16 @@
         }
 
         .nav-links {
-            list-style: none;
+            list-style-type: none;
             padding: 0;
             display: flex;
             justify-content: center;
             gap: 20px;
-            flex-wrap: wrap;
         }
 
         .nav-links a {
-            color: white;
             text-decoration: none;
+            color: white;
             transition: color 0.3s;
         }
 
@@ -62,7 +61,17 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
             padding: 10px;
-            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            text-decoration: none;
+            padding: 8px;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            color: #007bff;
         }
 
         .dropdown:hover .dropdown-content {
@@ -73,14 +82,14 @@
             max-width: 1200px;
             margin: auto;
             padding: 20px;
-            background-color: white;
+            background: white;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         .two-column-layout {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
         }
 
@@ -108,11 +117,6 @@
             padding: 20px;
         }
 
-        .paragraph-box {
-            margin-bottom: 15px;
-            line-height: 1.5;
-        }
-
         .contact-button {
             text-align: center;
             margin-top: 20px;
@@ -128,6 +132,50 @@
         }
 
         .contact-button a:hover {
+            background: #444;
+        }
+
+        .contact-form {
+            padding: 30px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        .contact-form h2 {
+            text-align: center;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .contact-form .form-group label {
+            font-weight: bold;
+            display: block;
+        }
+
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .contact-form button {
+            padding: 12px 25px;
+            background: #333;
+            color: white;
+            border-radius: 5px;
+            border: none;
+            transition: background 0.3s;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
             background: #444;
         }
 
@@ -154,58 +202,34 @@
             text-align: center;
         }
 
-        /* Responsive design for smaller screens */
+        /* Responsive adjustments */
         @media (max-width: 768px) {
             .nav-links {
                 flex-direction: column;
-                text-align: center;
-            }
-
-            .dropdown {
-                position: relative;
-            }
-
-            .dropdown-content {
-                display: none;
-                position: static;
-                background: #333;
-                color: white;
-                min-width: 120px;
-                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-                border-radius: 5px;
-                padding: 10px;
-                z-index: 1;
-            }
-
-            .dropdown:hover .dropdown-content {
-                display: block;
+                gap: 15px;
             }
 
             .two-column-layout {
                 grid-template-columns: 1fr;
-                gap: 20px;
             }
 
-            .right-column {
-                text-align: center;
+            .contact-form {
+                padding: 20px;
             }
 
-            .image-box {
-                margin-bottom: 20px;
+            .dropdown-content {
+                position: static; /* Ensures dropdown appears below */
+                box-shadow: none; /* No shadow for narrower screens */
             }
         }
 
         @media (max-width: 480px) {
-            .paragraph-box {
-                font-size: 0.9em;
+            .nav-links {
+                gap: 10px;
             }
 
-            .contact-button a {
-                padding: 8px 16px;
-            }
-
-            .social-icons {
-                margin-top: 10px;
+            .contact-form {
+                padding: 20px;
             }
         }
     </style>
@@ -275,6 +299,8 @@
     </footer>
 </body>
 </html>
+
+
 
 
 
