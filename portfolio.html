@@ -21,6 +21,9 @@
             color: white;
             padding: 20px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .separator-horizontal {
@@ -103,15 +106,17 @@
             width: 100%;
             height: auto;
             object-fit: cover;
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 10px;
         }
 
         .portfolio-item img:hover {
             transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
         .contact-box {
-            background: #ccc;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
             padding: 40px;
             text-align: center;
             margin-top: 20px;
@@ -141,6 +146,29 @@
             padding: 20px;
         }
 
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .footer-content .social-icons a {
+            color: white;
+            font-size: 1.5em;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .footer-content .social-icons a:hover {
+            color: #007bff;
+        }
+
+        .footer-content .tagline {
+            font-size: 1em;
+        }
+
         /* Responsive design */
         @media (max-width: 768px) {
             .masonry-grid {
@@ -155,6 +183,15 @@
             .dropdown-content {
                 position: static;
                 box-shadow: none;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-content .tagline {
+                margin-top: 10px;
             }
         }
 
@@ -274,20 +311,29 @@
             </div>
             <!-- Add more portfolio images here -->
 
-                <div class="contact-button">
-                    <a href="contact.html">contact</a>
-                </div>
+            <div class="contact-button">
+                <a href="contact.html">contact</a>
             </div>
         </div>
     </div>
 
     <footer>
         <div class="footer-content">
+            <div class="tagline">
+                Capturing life's moments, one photo at a time.
+            </div>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/littlejuneberryphotography/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100094520224957"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+        <div class="footer-content">
             &copy; 2024 Little Juneberry Photography. All rights reserved.
         </div>
     </footer>
 </body>
 </html>
+
 
 
 
