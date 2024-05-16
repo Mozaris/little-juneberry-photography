@@ -87,10 +87,14 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .two-column-layout {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
+        .slideshow-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .mySlides {
+            display: none;
         }
 
         .image-box {
@@ -103,6 +107,7 @@
             width: 100%;
             height: auto;
             object-fit: cover;
+            max-width: 100%;
             transition: transform 0.3s;
         }
 
@@ -110,11 +115,24 @@
             transform: scale(1.05);
         }
 
-        .right-column {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 20px;
+        .description {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+
+        .about-photographer {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .about-photographer h2 {
+            font-size: 2em;
+        }
+
+        .about-photographer p {
+            font-size: 1.1em;
+            line-height: 1.6;
         }
 
         .contact-button {
@@ -132,50 +150,6 @@
         }
 
         .contact-button a:hover {
-            background: #444;
-        }
-
-        .contact-form {
-            padding: 30px;
-            background: #f9f9f9;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            margin-top: 30px;
-        }
-
-        .contact-form h2 {
-            text-align: center;
-        }
-
-        .contact-form .form-group {
-            margin-bottom: 20px;
-        }
-
-        .contact-form .form-group label {
-            font-weight: bold;
-            display: block;
-        }
-
-        .contact-form input,
-        .contact-form select,
-        .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-        }
-
-        .contact-form button {
-            padding: 12px 25px;
-            background: #333;
-            color: white;
-            border-radius: 5px;
-            border: none;
-            transition: background 0.3s;
-            cursor: pointer;
-        }
-
-        .contact-form button:hover {
             background: #444;
         }
 
@@ -209,17 +183,13 @@
                 gap: 15px;
             }
 
-            .two-column-layout {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-form {
-                padding: 20px;
-            }
-
             .dropdown-content {
                 position: static; /* Ensures dropdown appears below */
                 box-shadow: none; /* No shadow for narrower screens */
+            }
+
+            .slideshow-container {
+                max-width: 100%;
             }
         }
 
@@ -228,8 +198,8 @@
                 gap: 10px;
             }
 
-            .contact-form {
-                padding: 20px;
+            .contact-button a {
+                padding: 8px 16px;
             }
         }
     </style>
@@ -261,7 +231,7 @@
     </header>
 
     <!-- Main content area -->
-    <div class="container">
+    <div class="main-container">
         <main>
             <!-- Slideshow container -->
             <div class="slideshow-container">
@@ -343,6 +313,7 @@
     </script>
 </body>
 </html>
+
 
 
 
