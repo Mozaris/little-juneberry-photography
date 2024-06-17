@@ -17,10 +17,13 @@
         }
 
         header {
-            background: #333;
+            background: #48503a; /* Main color */
             color: white;
             padding: 20px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .separator-horizontal {
@@ -45,7 +48,7 @@
         }
 
         .nav-links a:hover {
-            color: #007bff;
+            color: #6b7753; /* Complementary hover color */
         }
 
         .dropdown {
@@ -55,11 +58,12 @@
         .dropdown-content {
             display: none;
             position: absolute;
-            background: #333;
+            background: #48503a; /* Main color */
             color: white;
             min-width: 120px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
+            z-index: 1;
             padding: 10px;
         }
 
@@ -71,7 +75,7 @@
         }
 
         .dropdown-content a:hover {
-            color: #007bff;
+            color: #6b7753; /* Complementary hover color */
         }
 
         .dropdown:hover .dropdown-content {
@@ -103,11 +107,12 @@
             width: 100%;
             height: auto;
             object-fit: cover;
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .image-box img:hover {
             transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
         .right-column {
@@ -124,7 +129,7 @@
 
         .contact-button a {
             padding: 10px 20px;
-            background: #333;
+            background: #48503a; /* Main color */
             color: white;
             border-radius: 5px;
             text-decoration: none;
@@ -132,7 +137,7 @@
         }
 
         .contact-button a:hover {
-            background: #444;
+            background: #6b7753; /* Complementary hover color */
         }
 
         .contact-form {
@@ -167,7 +172,7 @@
 
         .contact-form button {
             padding: 12px 25px;
-            background: #333;
+            background: #48503a; /* Main color */
             color: white;
             border-radius: 5px;
             border: none;
@@ -176,7 +181,7 @@
         }
 
         .contact-form button:hover {
-            background: #444;
+            background: #6b7753; /* Complementary hover color */
         }
 
         .social-icons {
@@ -185,21 +190,44 @@
         }
 
         .social-icons a {
-            color: #333;
+            color: #48503a; /* Main color */
             font-size: 1.5em;
             margin: 0 10px;
             transition: color 0.3s;
         }
 
         .social-icons a:hover {
-            color: #007bff;
+            color: #6b7753; /* Complementary hover color */
         }
 
         footer {
-            background: #333;
+            background: #48503a; /* Main color */
             color: white;
-            padding: 20px;
             text-align: center;
+            padding: 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .footer-content .social-icons a {
+            color: white;
+            font-size: 1.5em;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .footer-content .social-icons a:hover {
+            color: #6b7753; /* Complementary hover color */
+        }
+
+        .footer-content .tagline {
+            font-size: 1em;
         }
 
         /* Responsive adjustments */
@@ -207,6 +235,11 @@
             .nav-links {
                 flex-direction: column;
                 gap: 15px;
+            }
+
+            .dropdown-content {
+                position: static;
+                box-shadow: none;
             }
 
             .two-column-layout {
@@ -217,9 +250,13 @@
                 padding: 20px;
             }
 
-            .dropdown-content {
-                position: static; /* Ensures dropdown appears below */
-                box-shadow: none; /* No shadow for narrower screens */
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-content .tagline {
+                margin-top: 10px;
             }
         }
 
