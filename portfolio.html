@@ -19,11 +19,16 @@
         header {
             background: #48503a; /* Main color */
             color: white;
-            padding: 20px;
+            padding: 10px 20px; /* Reduced padding */
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 1000;
+        }
+
+        .header-container h1 {
+            margin: 0;
+            font-size: 2em;
         }
 
         .separator-horizontal {
@@ -38,7 +43,7 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 15px;
             position: relative;
         }
 
@@ -46,6 +51,7 @@
             text-decoration: none;
             color: white;
             transition: color 0.3s;
+            font-size: 0.9em; /* Reduced font size */
         }
 
         .nav-links a:hover {
@@ -194,23 +200,46 @@
             .footer-content .tagline {
                 margin-top: 10px;
             }
+
+            .contact-box {
+                padding: 30px; /* Adjusted padding for mobile */
+            }
+
+            .contact-button a {
+                padding: 10px 20px; /* Adjusted padding for button */
+                font-size: 1em; /* Adjusted font size for button */
+            }
         }
 
         @media (max-width: 480px) {
-            .masonry-grid {
-                column-count: 1;
+            header {
+                padding: 5px 10px; /* Further reduced padding */
+            }
+
+            .header-container h1 {
+                font-size: 1.2em; /* Adjusted font size */
+                margin-bottom: 5px; /* Reduced margin */
             }
 
             .nav-links {
                 gap: 5px;
             }
 
+            .nav-links a {
+                font-size: 0.8em; /* Further reduced font size */
+            }
+
+            .masonry-grid {
+                column-count: 2; /* Two columns for photos */
+            }
+
             .contact-box {
-                padding: 30px;
+                padding: 20px; /* Further adjusted padding for mobile */
             }
 
             .contact-button a {
-                padding: 10px 20px;
+                padding: 8px 16px; /* Further adjusted padding for button */
+                font-size: 0.9em; /* Further adjusted font size for button */
             }
         }
     </style>
@@ -274,6 +303,39 @@
             <div class="portfolio-item">
                 <img src="Portfolio10.jpg" alt="Portfolio Image 10">
             </div>
+            <div class="portfolio-item">
+                <img src="Portfolio11.jpg" alt="Portfolio Image 11">
+            </div>
+            <div class="portfolio-item">
+                <img src="Portfolio12.jpg" alt="Portfolio Image 12">
+            </div>
+            <div class="portfolio-item">
+                <img src="Portfolio13.jpg" alt="Portfolio Image 13">
+            </div>
+            <div class="portfolio-item">
+                <img src="Portfolio14.jpg" alt="Portfolio Image 14">
+            </div>
+            <div class="portfolio-item">
+                <img src="Portfolio15.jpg" alt="Portfolio Image 15">
+            </div>
+            <div class="portfolio-item">
+                <img src="Portfolio16.jpg" alt="Portfolio Image 16">
+            </div>
+            <div class="portfolio-item">
+                <img src="Portfolio17.jpg" alt="Portfolio Image 17">
+            </div>
+            <div class="portfolio-item">
+                <img src="Portfolio18.jpg" alt="Portfolio Image 18">
+            </div>
+            <div class="portfolio-item">
+                <img src="Portfolio19.jpg" alt="Portfolio Image 19">
+            </div>
+            <div class="portfolio-item">
+                <img src="Portfolio20.jpg" alt="Portfolio Image 20">
+            </div>
+            <div class="portfolio-item">
+                <img src="Portfolio21.jpg" alt="Portfolio Image 21">
+            </div>
             <div class="contact-box">
                 <h3>Need to get in touch?</h3>
                 <div class="contact-button">
@@ -281,53 +343,72 @@
                 </div>
             </div>
             <div class="portfolio-item">
-                <img src="Portfolio20.jpg" alt="Portfolio Image 1">
+                <img src="Portfolio22.jpg" alt="Portfolio Image 22">
             </div>
             <div class="portfolio-item">
-                <img src="Portfolio12.jpg" alt="Portfolio Image 2">
+                <img src="Portfolio23.jpg" alt="Portfolio Image 23">
             </div>
             <div class="portfolio-item">
-                <img src="Portfolio13.jpg" alt="Portfolio Image 3">
+                <img src="Portfolio24.jpg" alt="Portfolio Image 24">
             </div>
             <div class="portfolio-item">
-                <img src="Portfolio14.jpg" alt="Portfolio Image 4">
+                <img src="Portfolio25.jpg" alt="Portfolio Image 25">
             </div>
             <div class="portfolio-item">
-                <img src="Portfolio15.jpg" alt="Portfolio Image 5">
+                <img src="Portfolio26.jpg" alt="Portfolio Image 26">
             </div>
             <div class="portfolio-item">
-                <img src="Portfolio16.jpg" alt="Portfolio Image 6">
+                <img src="Portfolio27.jpg" alt="Portfolio Image 27">
             </div>
             <div class="portfolio-item">
-                <img src="Portfolio17.jpg" alt="Portfolio Image 7">
+                <img src="Portfolio28.jpg" alt="Portfolio Image 28">
             </div>
             <div class="portfolio-item">
-                <img src="Portfolio18.jpg" alt="Portfolio Image 8">
+                <img src="Portfolio29.jpg" alt="Portfolio Image 29">
             </div>
             <div class="portfolio-item">
-                <img src="Portfolio19.jpg" alt="Portfolio Image 9">
+                <img src="Portfolio30.jpg" alt="Portfolio Image 30">
             </div>
             <div class="portfolio-item">
-                <img src="Portfolio11.jpg" alt="Portfolio Image 10">
+                <img src="Portfolio31.jpg" alt="Portfolio Image 31">
             </div>
             <div class="portfolio-item">
-                <img src="Portfolio23.jpg" alt="Portfolio Image 7">
+                <img src="Portfolio32.jpg" alt="Portfolio Image 32">
             </div>
             <div class="portfolio-item">
-                <img src="Portfolio21.jpg" alt="Portfolio Image 8">
+                <img src="Portfolio33.jpg" alt="Portfolio Image 33">
             </div>
             <div class="portfolio-item">
-                <img src="Portfolio22.jpg" alt="Portfolio Image 9">
+                <img src="Portfolio34.jpg" alt="Portfolio Image 34">
             </div>
             <div class="portfolio-item">
-                <img src="Portfolio24.jpg" alt="Portfolio Image 10">
+                <img src="Portfolio35.jpg" alt="Portfolio Image 35">
             </div>
-            <!-- Add more portfolio images here -->
-
-            <div class="contact-button">
-                <a href="contact.html">contact</a>
+            <div class="portfolio-item">
+                <img src="Portfolio36.jpg" alt="Portfolio Image 36">
+            </div>
+            <div class="portfolio-item">
+                <img src="Portfolio37.jpg" alt="Portfolio Image 37">
+            </div>
+            <div class="portfolio-item">
+                <img src="Portfolio38.jpg" alt="Portfolio Image 38">
+            </div>
+            <div class="portfolio-item">
+                <img src="Portfolio39.jpg" alt="Portfolio Image 39">
+            </div>
+            <div class="portfolio-item">
+                <img src="Portfolio40.jpg" alt="Portfolio Image 40">
+            </div>
+            <div class="portfolio-item">
+                <img src="Portfolio41.jpg" alt="Portfolio Image 41">
+            </div>
+            <div class="portfolio-item">
+                <img src="Portfolio42.jpg" alt="Portfolio Image 42">
             </div>
         </div>
+            <div class="contact-button">
+                <a href="contact.html">Contact</a>
+            </div>
     </div>
 
     <footer>
@@ -346,6 +427,10 @@
     </footer>
 </body>
 </html>
+
+
+
+
 
 
 
