@@ -23,6 +23,11 @@
             text-align: center;
         }
 
+        .header-container h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
         .separator-horizontal {
             height: 2px;
             background: white;
@@ -224,8 +229,21 @@
         }
 
         @media (max-width: 480px) {
+            header {
+                padding: 10px 15px; /* Reduced padding */
+            }
+
+            .header-container h1 {
+                font-size: 1.5em; /* Adjusted font size */
+                margin-bottom: 5px; /* Reduced margin */
+            }
+
             .nav-links {
                 gap: 10px;
+            }
+
+            .nav-links a {
+                font-size: 0.9em; /* Reduced font size */
             }
 
             .contact-form {
@@ -237,26 +255,28 @@
 <body>
     <!-- Header with navigation -->
     <header>
-        <h1>Allie Eastwood</h1>
-        <div class="separator-horizontal"></div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li class="dropdown">
-                    <a href="#">Services</a>
-                    <ul class="dropdown-content">
-                        <li><a href="wedding.html">Wedding</a></li>
-                        <li><a href="engagement.html">Engagement</a></li>
-                        <li><a href="family.html">Family</a></li>
-                        <li><a href="special-occasion.html">Special Occasion</a></li>
-                    </ul>
-                </li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="separator-horizontal"></div>
+        <div class="header-container">
+            <h1>Allie Eastwood</h1>
+            <div class="separator-horizontal"></div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#">Services</a>
+                        <ul class="dropdown-content">
+                            <li><a href="wedding.html">Wedding</a></li>
+                            <li><a href="engagement.html">Engagement</a></li>
+                            <li><a href="family.html">Family</a></li>
+                            <li><a href="special-occasion.html">Special Occasion</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="separator-horizontal"></div>
+        </div>
     </header>
 
     <!-- Main content area -->

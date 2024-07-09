@@ -26,6 +26,11 @@
             text-align: center;
         }
 
+        .header-container h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
         .separator-horizontal {
             height: 2px;
             background: white;
@@ -91,8 +96,21 @@
         }
 
         @media (max-width: 480px) {
+            header {
+                padding: 10px 15px; /* Reduced padding */
+            }
+
+            .header-container h1 {
+                font-size: 1.5em; /* Adjusted font size */
+                margin-bottom: 5px; /* Reduced margin */
+            }
+
             .nav-links {
                 gap: 10px;
+            }
+
+            .nav-links a {
+                font-size: 0.9em; /* Reduced font size */
             }
         }
 
