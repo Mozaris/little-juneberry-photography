@@ -1,455 +1,695 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photography Portfolio - Little Juneberry Photography</title>
-    <meta name="description" content="Explore the stunning portfolio of Little Juneberry Photography. From weddings to family portraits, discover captivating moments captured with creativity and care.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
-    <style>
-        /* Your CSS styles */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Lato', sans-serif;
-            background: #f5f5f5;
-        }
-
-        header {
-            background: #48503a; /* Main color */
-            color: white;
-            padding: 10px 20px; /* Reduced padding */
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-container h1 {
-            margin: 0;
-            font-size: 2em;
-        }
-
-        .separator-horizontal {
-            height: 2px;
-            background: white;
-            width: 100%;
-            margin: 10px 0;
-        }
-
-        .nav-links {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            position: relative;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: white;
-            transition: color 0.3s;
-            font-size: 0.9em; /* Reduced font size */
-        }
-
-        .nav-links a:hover {
-            color: #6b7753; /* Complementary hover color */
-        }
-
-        .nav-links .dropdown {
-            position: relative;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background: #48503a; /* Main color */
-            color: white;
-            min-width: 120px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-            z-index: 1;
-            padding: 10px;
-        }
-
-        .dropdown-content a {
-            color: white;
-            text-decoration: none;
-            padding: 8px;
-            display: block;
-        }
-
-        .dropdown-content a:hover {
-            color: #6b7753; /* Complementary hover color */
-        }
-
-        .nav-links .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .portfolio-container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .masonry-grid {
-            column-count: 3;
-            column-gap: 20px;
-        }
-
-        .portfolio-item {
-            break-inside: avoid;
-            margin-bottom: 20px;
-        }
-
-        .portfolio-item img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            transition: transform 0.3s, box-shadow 0.3s;
-            border-radius: 10px;
-        }
-
-        .portfolio-item img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .contact-box {
-            background: linear-gradient(to right, #ffecd2, #fcb69f);
-            padding: 40px;
-            text-align: center;
-            margin-top: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact-button a {
-            padding: 12px 24px;
-            background: #48503a; /* Main color */
-            color: white;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 1.1em;
-            transition: background-color 0.3s;
-        }
-
-        .contact-button a:hover {
-            background: #6b7753; /* Complementary hover color */
-        }
-
-        footer {
-            background: #48503a; /* Main color */
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .footer-content .social-icons a {
-            color: white;
-            font-size: 1.5em;
-            margin: 0 10px;
-            transition: color 0.3s;
-        }
-
-        .footer-content .social-icons a:hover {
-            color: #6b7753; /* Complementary hover color */
-        }
-
-        .footer-content .tagline {
-            font-size: 1em;
-        }
-
-        /* Responsive design */
-        @media (max-width: 768px) {
-            .masonry-grid {
-                column-count: 2;
-            }
-
-            .nav-links {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .dropdown-content {
-                position: static;
-                box-shadow: none;
-            }
-
-            .footer-content {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .footer-content .tagline {
-                margin-top: 10px;
-            }
-
-            .contact-box {
-                padding: 30px; /* Adjusted padding for mobile */
-            }
-
-            .contact-button a {
-                padding: 10px 20px; /* Adjusted padding for button */
-                font-size: 1em; /* Adjusted font size for button */
-            }
-        }
-
-        @media (max-width: 480px) {
-            header {
-                padding: 5px 10px; /* Further reduced padding */
-            }
-
-            .header-container h1 {
-                font-size: 1.2em; /* Adjusted font size */
-                margin-bottom: 5px; /* Reduced margin */
-            }
-
-            .nav-links {
-                gap: 5px;
-            }
-
-            .nav-links a {
-                font-size: 0.8em; /* Further reduced font size */
-            }
-
-            .masonry-grid {
-                column-count: 2; /* Two columns for photos */
-            }
-
-            .contact-box {
-                padding: 20px; /* Further adjusted padding for mobile */
-            }
-
-            .contact-button a {
-                padding: 8px 16px; /* Further adjusted padding for button */
-                font-size: 0.9em; /* Further adjusted font size for button */
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photography Portfolio - Little Juneberry Photography</title>
+  <meta name="description" content="Explore the stunning portfolio of Little Juneberry Photography. From weddings to family portraits, discover captivating moments captured with creativity and care.">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Google Fonts: Lato for body, Signatura Monoline Script for headings -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Signatura+Monoline+Script&display=swap">
+  <!-- Lightbox CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+  <style>
+    :root {
+      --primary-color: #48503a;
+      --secondary-color: #6b7753;
+      --background-color: #c2b59e;   /* Warm Taupe for Body */
+      --container-bg: #e2d4c3;       /* Light Taupe for Containers */
+      --text-color: #333;
+      --transition-speed: 0.3s;
+      --border-radius: 10px;
+    }
+    /* Global Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Lato', sans-serif;
+      background: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+    a {
+      color: var(--text-color);
+      text-decoration: none;
+      transition: color var(--transition-speed);
+    }
+    a:hover, a:focus {
+      color: var(--secondary-color);
+    }
+    /* Header */
+    header {
+      background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .header-container h1 {
+      font-family: 'Signatura Monoline Script', cursive;
+      font-size: 2.8em;
+      color: white;
+      margin: 0;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+    }
+    .nav-links a {
+      font-size: 1em;
+      padding: 8px 12px;
+      border-bottom: 2px solid transparent;
+      color: white;
+      transition: color var(--transition-speed), border-bottom var(--transition-speed);
+    }
+    .nav-links a:hover {
+      color: var(--secondary-color);
+      border-bottom: 2px solid var(--secondary-color);
+    }
+    .dropdown {
+      position: relative;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: var(--primary-color);
+      min-width: 120px;
+      border-radius: var(--border-radius);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 10px;
+      z-index: 1000;
+    }
+    .dropdown-content a {
+      display: block;
+      padding: 8px;
+      color: white;
+      transition: color var(--transition-speed);
+    }
+    .dropdown-content a:hover {
+      color: var(--secondary-color);
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    /* Introduction Section */
+    .introduction {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 40px;
+      text-align: center;
+      animation: fadeIn 1s ease-out;
+    }
+    .introduction h2 {
+      font-family: 'Signatura Monoline Script', cursive;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: var(--primary-color);
+    }
+    .introduction p {
+      font-size: 1.1em;
+      color: var(--text-color);
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.8;
+    }
+    /* Portfolio Section */
+    .portfolio-container {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 40px;
+      animation: fadeIn 1s ease-out;
+    }
+    .portfolio-container h2 {
+      text-align: center;
+      font-family: 'Signatura Monoline Script', cursive;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+      color: var(--primary-color);
+    }
+    .masonry-grid {
+      column-count: 4;
+      column-gap: 20px;
+    }
+    @media (max-width: 1200px) {
+      .masonry-grid {
+        column-count: 3;
+      }
+    }
+    @media (max-width: 800px) {
+      .masonry-grid {
+        column-count: 2;
+      }
+    }
+    @media (max-width: 500px) {
+      .masonry-grid {
+        column-count: 1;
+        column-gap: 10px;
+        padding: 0 10px;
+      }
+      .portfolio-container h2 {
+        font-size: 2em;
+      }
+      .introduction h2 {
+        font-size: 2em;
+      }
+      .introduction p {
+        font-size: 1em;
+      }
+    }
+    .portfolio-item {
+      display: inline-block;
+      width: 100%;
+      margin-bottom: 20px;
+      position: relative;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    }
+    .portfolio-item a {
+      display: block;
+      position: relative;
+    }
+    .portfolio-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform var(--transition-speed), opacity var(--transition-speed);
+    }
+    .portfolio-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+    }
+    .portfolio-item:hover img {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
+    /* Overlay on Hover */
+    .portfolio-item .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(72, 80, 58, 0.85);
+      color: white;
+      padding: 15px;
+      text-align: center;
+      transform: translateY(100%);
+      transition: transform var(--transition-speed);
+      font-size: 1em;
+    }
+    .portfolio-item:hover .overlay {
+      transform: translateY(0);
+    }
+    /* Contact Box */
+    .contact-box {
+      background: linear-gradient(135deg, #ffecd2, #fcb69f);
+      padding: 60px 40px;
+      text-align: center;
+      margin: 80px auto;
+      border-radius: var(--border-radius);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      transition: transform var(--transition-speed);
+      max-width: 800px;
+    }
+    .contact-box:hover {
+      transform: translateY(-8px);
+    }
+    .contact-box h3 {
+      font-family: 'Signatura Monoline Script', cursive;
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: var(--primary-color);
+    }
+    .contact-button a {
+      padding: 14px 28px;
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.1em;
+      transition: background var(--transition-speed), transform var(--transition-speed);
+      display: inline-block;
+      font-weight: 700;
+    }
+    .contact-button a:hover,
+    .contact-button a:focus {
+      background: var(--secondary-color);
+      transform: scale(1.05);
+    }
+    /* Footer */
+    footer {
+      background: var(--primary-color);
+      color: white;
+      padding: 30px 40px;
+    }
+    .footer-content {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .footer-content .tagline {
+      font-size: 1.1em;
+      margin-bottom: 20px;
+      flex: 1 1 100%;
+      text-align: center;
+      font-weight: 500;
+    }
+    .social-icons {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .social-icons a {
+      color: white;
+      font-size: 1.8em;
+      transition: color var(--transition-speed), transform var(--transition-speed);
+    }
+    .social-icons a:hover,
+    .social-icons a:focus {
+      color: var(--secondary-color);
+      transform: scale(1.1);
+    }
+    .footer-bottom {
+      text-align: center;
+      font-size: 0.9em;
+      border-top: 1px solid var(--secondary-color);
+      padding-top: 15px;
+      width: 100%;
+      margin-top: 10px;
+    }
+    /* Fade In Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <h1>Little Juneberry Photography</h1>
-            <div class="separator-horizontal"></div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li class="dropdown">
-                        <a href="#">Services</a>
-                        <ul class="dropdown-content">
-                            <li><a href="wedding.html">Wedding</a></li>
-                            <li><a href="engagement.html">Engagement</a></li>
-                            <li><a href="family.html">Family</a></li>
-                            <li><a href="special-occasion.html">Special Occasion</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="separator-horizontal"></div>
-        </div>
-    </header>
-
-    <div class="portfolio-container">
-        <h2>Photography Portfolio</h2>
-        <div class="masonry-grid">
-            <div class="portfolio-item">
-                <img src="Portfolio1.jpg" alt="Portfolio Image 1" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio2.jpg" alt="Portfolio Image 2" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio3.jpg" alt="Portfolio Image 3" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio4.jpg" alt="Portfolio Image 4" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio5.jpg" alt="Portfolio Image 5" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio6.jpg" alt="Portfolio Image 6" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio7.jpg" alt="Portfolio Image 7" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio8.jpg" alt="Portfolio Image 8" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio9.jpg" alt="Portfolio Image 9" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio10.jpg" alt="Portfolio Image 10" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio11.jpg" alt="Portfolio Image 11" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio12.jpg" alt="Portfolio Image 12" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio13.jpg" alt="Portfolio Image 13" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio14.jpg" alt="Portfolio Image 14" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio15.jpg" alt="Portfolio Image 15" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio16.jpg" alt="Portfolio Image 16" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio17.jpg" alt="Portfolio Image 17" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio18.jpg" alt="Portfolio Image 18" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio19.jpg" alt="Portfolio Image 19" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio20.jpg" alt="Portfolio Image 20" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio21.jpg" alt="Portfolio Image 21" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio22.jpg" alt="Portfolio Image 22" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio23.jpg" alt="Portfolio Image 23" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio24.jpg" alt="Portfolio Image 24" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio25.jpg" alt="Portfolio Image 25" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio26.jpg" alt="Portfolio Image 26" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio27.jpg" alt="Portfolio Image 27" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio28.jpg" alt="Portfolio Image 28" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio29.jpg" alt="Portfolio Image 29" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio30.jpg" alt="Portfolio Image 30" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio31.jpg" alt="Portfolio Image 31" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio32.jpg" alt="Portfolio Image 32" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio33.jpg" alt="Portfolio Image 33" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio34.jpg" alt="Portfolio Image 34" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio35.jpg" alt="Portfolio Image 35" loading="lazy">
-            </div>
-            <div class=""></div>
-            <div class="portfolio-item">
-                <img src="Portfolio36.jpg" alt="Portfolio Image 36" loading="lazy">
-            </div> 
-            <div class="portfolio-item">
-                <img src="Portfolio37.jpg" alt="Portfolio Image 37" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio38.jpg" alt="Portfolio Image 38" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio39.jpg" alt="Portfolio Image 39" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio40.jpg" alt="Portfolio Image 40" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio41.jpg" alt="Portfolio Image 41" loading="lazy">
-            </div>
-            <div class="portfolio-item">
-                <img src="Portfolio42.jpg" alt="Portfolio Image 42" loading="lazy">
-            </div>
-        </div>
-        <div class="contact-button">
-            <a href="contact.html">Contact</a>
-        </div>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <h1>Little Juneberry Photography</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="dropdown">
+            <a href="#" aria-haspopup="true" aria-expanded="false">Services <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-content" aria-label="submenu">
+              <li><a href="wedding.html">Wedding</a></li>
+              <li><a href="engagement.html">Engagement</a></li>
+              <li><a href="family.html">Family</a></li>
+              <li><a href="special-occasion.html">Special Occasion</a></li>
+            </ul>
+          </li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <footer>
-        <div class="footer-content">
-            <div class="tagline">
-                Capturing life's moments, one photo at a time.
-            </div>
-            <div class="social-icons">
-                <a href="https://www.instagram.com/littlejuneberryphotography/"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=100094520224957"><i class="fab fa-facebook-f"></i></a>
-            </div>
-        </div>
-        <div class="footer-content">
-            &copy; 2024 Little Juneberry Photography. All rights reserved.
-        </div>
-    </footer>
+  <!-- Introduction Section -->
+  <section class="introduction">
+    <h2>Welcome to Little Juneberry Photography</h2>
+    <p>Our portfolio is a testament to our passion for capturing unforgettable moments. Explore our diverse collection that celebrates the beauty of life, love, and creativity.</p>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section class="portfolio-container">
+    <h2>Our Portfolio</h2>
+    <div class="masonry-grid">
+      <!-- Portfolio1 -->
+      <div class="portfolio-item">
+        <a href="Portfolio1_large.jpg" data-lightbox="portfolio" data-title="Wedding Bliss">
+          <img src="Portfolio1.jpg" alt="Wedding Bliss by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Wedding Bliss</div>
+        </a>
+      </div>
+      <!-- Portfolio2 -->
+      <div class="portfolio-item">
+        <a href="Portfolio2_large.jpg" data-lightbox="portfolio" data-title="Engagement Glow">
+          <img src="Portfolio2.jpg" alt="Engagement Glow by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Engagement Glow</div>
+        </a>
+      </div>
+      <!-- Portfolio3 -->
+      <div class="portfolio-item">
+        <a href="Portfolio3_large.jpg" data-lightbox="portfolio" data-title="Family Moments">
+          <img src="Portfolio3.jpg" alt="Family Moments by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Family Moments</div>
+        </a>
+      </div>
+      <!-- Portfolio4 -->
+      <div class="portfolio-item">
+        <a href="Portfolio4_large.jpg" data-lightbox="portfolio" data-title="Special Occasion Elegance">
+          <img src="Portfolio4.jpg" alt="Special Occasion Elegance by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Special Occasion Elegance</div>
+        </a>
+      </div>
+      <!-- Portfolio5 -->
+      <div class="portfolio-item">
+        <a href="Portfolio5_large.jpg" data-lightbox="portfolio" data-title="Sunset Romance">
+          <img src="Portfolio5.jpg" alt="Sunset Romance by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Sunset Romance</div>
+        </a>
+      </div>
+      <!-- Portfolio6 -->
+      <div class="portfolio-item">
+        <a href="Portfolio6_large.jpg" data-lightbox="portfolio" data-title="Autumn Love">
+          <img src="Portfolio6.jpg" alt="Autumn Love by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Autumn Love</div>
+        </a>
+      </div>
+      <!-- Portfolio7 -->
+      <div class="portfolio-item">
+        <a href="Portfolio7_large.jpg" data-lightbox="portfolio" data-title="Joyful Celebrations">
+          <img src="Portfolio7.jpg" alt="Joyful Celebrations by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Joyful Celebrations</div>
+        </a>
+      </div>
+      <!-- Portfolio8 -->
+      <div class="portfolio-item">
+        <a href="Portfolio8_large.jpg" data-lightbox="portfolio" data-title="Eternal Vows">
+          <img src="Portfolio8.jpg" alt="Eternal Vows by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Eternal Vows</div>
+        </a>
+      </div>
+      <!-- Portfolio9 -->
+      <div class="portfolio-item">
+        <a href="Portfolio9_large.jpg" data-lightbox="portfolio" data-title="Glamour Shots">
+          <img src="Portfolio9.jpg" alt="Glamour Shots by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Glamour Shots</div>
+        </a>
+      </div>
+      <!-- Portfolio10 -->
+      <div class="portfolio-item">
+        <a href="Portfolio10_large.jpg" data-lightbox="portfolio" data-title="Candid Moments">
+          <img src="Portfolio10.jpg" alt="Candid Moments by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Candid Moments</div>
+        </a>
+      </div>
+      <!-- Portfolio11 -->
+      <div class="portfolio-item">
+        <a href="Portfolio11_large.jpg" data-lightbox="portfolio" data-title="Vintage Vibes">
+          <img src="Portfolio11.jpg" alt="Vintage Vibes by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Vintage Vibes</div>
+        </a>
+      </div>
+      <!-- Portfolio12 -->
+      <div class="portfolio-item">
+        <a href="Portfolio12_large.jpg" data-lightbox="portfolio" data-title="Elegant Portraits">
+          <img src="Portfolio12.jpg" alt="Elegant Portraits by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Elegant Portraits</div>
+        </a>
+      </div>
+      <!-- Portfolio13 -->
+      <div class="portfolio-item">
+        <a href="Portfolio13_large.jpg" data-lightbox="portfolio" data-title="Bridal Beauty">
+          <img src="Portfolio13.jpg" alt="Bridal Beauty by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Bridal Beauty</div>
+        </a>
+      </div>
+      <!-- Portfolio14 -->
+      <div class="portfolio-item">
+        <a href="Portfolio14_large.jpg" data-lightbox="portfolio" data-title="Nature's Embrace">
+          <img src="Portfolio14.jpg" alt="Nature's Embrace by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Nature's Embrace</div>
+        </a>
+      </div>
+      <!-- Portfolio15 -->
+      <div class="portfolio-item">
+        <a href="Portfolio15_large.jpg" data-lightbox="portfolio" data-title="Urban Chic">
+          <img src="Portfolio15.jpg" alt="Urban Chic by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Urban Chic</div>
+        </a>
+      </div>
+      <!-- Portfolio16 -->
+      <div class="portfolio-item">
+        <a href="Portfolio16_large.jpg" data-lightbox="portfolio" data-title="Golden Hour">
+          <img src="Portfolio16.jpg" alt="Golden Hour by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Golden Hour</div>
+        </a>
+      </div>
+      <!-- Portfolio17 -->
+      <div class="portfolio-item">
+        <a href="Portfolio17_large.jpg" data-lightbox="portfolio" data-title="Intimate Gatherings">
+          <img src="Portfolio17.jpg" alt="Intimate Gatherings by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Intimate Gatherings</div>
+        </a>
+      </div>
+      <!-- Portfolio18 -->
+      <div class="portfolio-item">
+        <a href="Portfolio18_large.jpg" data-lightbox="portfolio" data-title="Festive Spirits">
+          <img src="Portfolio18.jpg" alt="Festive Spirits by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Festive Spirits</div>
+        </a>
+      </div>
+      <!-- Portfolio19 -->
+      <div class="portfolio-item">
+        <a href="Portfolio19_large.jpg" data-lightbox="portfolio" data-title="Romantic Evenings">
+          <img src="Portfolio19.jpg" alt="Romantic Evenings by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Romantic Evenings</div>
+        </a>
+      </div>
+      <!-- Portfolio20 -->
+      <div class="portfolio-item">
+        <a href="Portfolio20_large.jpg" data-lightbox="portfolio" data-title="Cherished Moments">
+          <img src="Portfolio20.jpg" alt="Cherished Moments by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Cherished Moments</div>
+        </a>
+      </div>
+      <!-- Portfolio21 -->
+      <div class="portfolio-item">
+        <a href="Portfolio21_large.jpg" data-lightbox="portfolio" data-title="Elegant Affairs">
+          <img src="Portfolio21.jpg" alt="Elegant Affairs by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Elegant Affairs</div>
+        </a>
+      </div>
+      <!-- Portfolio22 -->
+      <div class="portfolio-item">
+        <a href="Portfolio22_large.jpg" data-lightbox="portfolio" data-title="Magical Weddings">
+          <img src="Portfolio22.jpg" alt="Magical Weddings by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Magical Weddings</div>
+        </a>
+      </div>
+      <!-- Portfolio23 -->
+      <div class="portfolio-item">
+        <a href="Portfolio23_large.jpg" data-lightbox="portfolio" data-title="Beautiful Beginnings">
+          <img src="Portfolio23.jpg" alt="Beautiful Beginnings by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Beautiful Beginnings</div>
+        </a>
+      </div>
+      <!-- Portfolio24 -->
+      <div class="portfolio-item">
+        <a href="Portfolio24_large.jpg" data-lightbox="portfolio" data-title="Timeless Elegance">
+          <img src="Portfolio24.jpg" alt="Timeless Elegance by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Timeless Elegance</div>
+        </a>
+      </div>
+      <!-- Portfolio25 -->
+      <div class="portfolio-item">
+        <a href="Portfolio25_large.jpg" data-lightbox="portfolio" data-title="Joyful Gatherings">
+          <img src="Portfolio25.jpg" alt="Joyful Gatherings by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Joyful Gatherings</div>
+        </a>
+      </div>
+      <!-- Portfolio26 -->
+      <div class="portfolio-item">
+        <a href="Portfolio26_large.jpg" data-lightbox="portfolio" data-title="Radiant Smiles">
+          <img src="Portfolio26.jpg" alt="Radiant Smiles by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Radiant Smiles</div>
+        </a>
+      </div>
+      <!-- Portfolio27 -->
+      <div class="portfolio-item">
+        <a href="Portfolio27_large.jpg" data-lightbox="portfolio" data-title="Elegant Details">
+          <img src="Portfolio27.jpg" alt="Elegant Details by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Elegant Details</div>
+        </a>
+      </div>
+      <!-- Portfolio28 -->
+      <div class="portfolio-item">
+        <a href="Portfolio28_large.jpg" data-lightbox="portfolio" data-title="Serene Landscapes">
+          <img src="Portfolio28.jpg" alt="Serene Landscapes by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Serene Landscapes</div>
+        </a>
+      </div>
+      <!-- Portfolio29 -->
+      <div class="portfolio-item">
+        <a href="Portfolio29_large.jpg" data-lightbox="portfolio" data-title="Charming Portraits">
+          <img src="Portfolio29.jpg" alt="Charming Portraits by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Charming Portraits</div>
+        </a>
+      </div>
+      <!-- Portfolio30 -->
+      <div class="portfolio-item">
+        <a href="Portfolio30_large.jpg" data-lightbox="portfolio" data-title="Classic Elegance">
+          <img src="Portfolio30.jpg" alt="Classic Elegance by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Classic Elegance</div>
+        </a>
+      </div>
+      <!-- Portfolio31 -->
+      <div class="portfolio-item">
+        <a href="Portfolio31_large.jpg" data-lightbox="portfolio" data-title="Vibrant Celebrations">
+          <img src="Portfolio31.jpg" alt="Vibrant Celebrations by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Vibrant Celebrations</div>
+        </a>
+      </div>
+      <!-- Portfolio32 -->
+      <div class="portfolio-item">
+        <a href="Portfolio32_large.jpg" data-lightbox="portfolio" data-title="Graceful Moments">
+          <img src="Portfolio32.jpg" alt="Graceful Moments by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Graceful Moments</div>
+        </a>
+      </div>
+      <!-- Portfolio33 -->
+      <div class="portfolio-item">
+        <a href="Portfolio33_large.jpg" data-lightbox="portfolio" data-title="Luminous Nights">
+          <img src="Portfolio33.jpg" alt="Luminous Nights by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Luminous Nights</div>
+        </a>
+      </div>
+      <!-- Portfolio34 -->
+      <div class="portfolio-item">
+        <a href="Portfolio34_large.jpg" data-lightbox="portfolio" data-title="Blissful Days">
+          <img src="Portfolio34.jpg" alt="Blissful Days by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Blissful Days</div>
+        </a>
+      </div>
+      <!-- Portfolio35 -->
+      <div class="portfolio-item">
+        <a href="Portfolio35_large.jpg" data-lightbox="portfolio" data-title="Enchanting Moments">
+          <img src="Portfolio35.jpg" alt="Enchanting Moments by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Enchanting Moments</div>
+        </a>
+      </div>
+      <!-- Portfolio36 -->
+      <div class="portfolio-item">
+        <a href="Portfolio36_large.jpg" data-lightbox="portfolio" data-title="Serendipity">
+          <img src="Portfolio36.jpg" alt="Serendipity by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Serendipity</div>
+        </a>
+      </div>
+      <!-- Portfolio37 -->
+      <div class="portfolio-item">
+        <a href="Portfolio37_large.jpg" data-lightbox="portfolio" data-title="Tranquil Moments">
+          <img src="Portfolio37.jpg" alt="Tranquil Moments by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Tranquil Moments</div>
+        </a>
+      </div>
+      <!-- Portfolio38 -->
+      <div class="portfolio-item">
+        <a href="Portfolio38_large.jpg" data-lightbox="portfolio" data-title="Radiant Love">
+          <img src="Portfolio38.jpg" alt="Radiant Love by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Radiant Love</div>
+        </a>
+      </div>
+      <!-- Portfolio39 -->
+      <div class="portfolio-item">
+        <a href="Portfolio39_large.jpg" data-lightbox="portfolio" data-title="Ethereal Beauty">
+          <img src="Portfolio39.jpg" alt="Ethereal Beauty by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Ethereal Beauty</div>
+        </a>
+      </div>
+      <!-- Portfolio40 -->
+      <div class="portfolio-item">
+        <a href="Portfolio40_large.jpg" data-lightbox="portfolio" data-title="Joyful Union">
+          <img src="Portfolio40.jpg" alt="Joyful Union by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Joyful Union</div>
+        </a>
+      </div>
+      <!-- Portfolio41 -->
+      <div class="portfolio-item">
+        <a href="Portfolio41_large.jpg" data-lightbox="portfolio" data-title="Cherished Vows">
+          <img src="Portfolio41.jpg" alt="Cherished Vows by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Cherished Vows</div>
+        </a>
+      </div>
+      <!-- Portfolio42 -->
+      <div class="portfolio-item">
+        <a href="Portfolio42_large.jpg" data-lightbox="portfolio" data-title="Sunset Serenade">
+          <img src="Portfolio42.jpg" alt="Sunset Serenade by Little Juneberry Photography" loading="lazy">
+          <div class="overlay">Sunset Serenade</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Box -->
+  <section class="contact-box">
+    <h3>Interested in Working Together?</h3>
+    <div class="contact-button">
+      <a href="contact.html">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="tagline">
+        Capturing life's moments, one photo at a time.
+      </div>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/littlejuneberryphotography/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100094520224957" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2024 Little Juneberry Photography. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Lightbox JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+  <!-- Smooth Scroll & Dropdown Accessibility -->
+  <script>
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('header');
+      header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+    // Toggle aria-expanded for dropdowns
+    const dropdownLinks = document.querySelectorAll('.dropdown > a');
+    dropdownLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+        this.setAttribute('aria-expanded', !expanded);
+        const dropdown = this.nextElementSibling;
+        dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
+      });
+    });
+    // Close dropdown when clicking outside
+    window.addEventListener('click', function(e) {
+      dropdownLinks.forEach(link => {
+        const dropdown = link.nextElementSibling;
+        if (!link.contains(e.target) && !dropdown.contains(e.target)) {
+          link.setAttribute('aria-expanded', 'false');
+          dropdown.style.display = 'none';
+        }
+      });
+    });
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-

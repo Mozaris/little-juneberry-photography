@@ -1,299 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Little Juneberry Photography</title>
-    <meta name="description" content="Contact Little Juneberry Photography for inquiries about our services. Reach out via email or follow us on social media.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"> <!-- Google Fonts -->
-    <style>
-        /* Your CSS styles */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Lato', sans-serif;
-            background-image: url("Juneberry.JPG");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
-
-        header {
-            background: #48503a; /* Main color */
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .header-container h1 {
-            margin: 0;
-            font-size: 2em;
-        }
-
-        .separator-horizontal {
-            height: 2px;
-            background: white;
-            width: 100%;
-            margin: 10px 0;
-        }
-
-        .nav-links {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: white;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #6b7753; /* Complementary hover color */
-        }
-
-        .nav-links .dropdown {
-            position: relative;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background: #48503a; /* Main color */
-            color: white;
-            min-width: 120px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            text-decoration: none;
-            color: white;
-            display: block;
-            padding: 8px;
-            transition: color 0.3s;
-        }
-
-        .dropdown-content a:hover {
-            color: #6b7753; /* Complementary hover color */
-        }
-
-        .nav-links .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .nav-links {
-                flex-direction: column;
-                gap: 15px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header {
-                padding: 10px 15px; /* Reduced padding */
-            }
-
-            .header-container h1 {
-                font-size: 1.5em; /* Adjusted font size */
-                margin-bottom: 5px; /* Reduced margin */
-            }
-
-            .nav-links {
-                gap: 10px;
-            }
-
-            .nav-links a {
-                font-size: 0.9em; /* Reduced font size */
-            }
-        }
-
-        /* Contact page specific styles */
-        .contact-container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact-header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .contact-info {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .contact-info a {
-            text-decoration: none;
-            color: #48503a; /* Main color */
-            transition: color 0.3s;
-        }
-
-        .contact-info a:hover {
-            color: #6b7753; /* Complementary hover color */
-        }
-
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .social-icons a {
-            color: #48503a; /* Main color */
-            transition: color 0.3s;
-        }
-
-        .social-icons a:hover {
-            color: #6b7753; /* Complementary hover color */
-        }
-
-        .social-icons i {
-            font-size: 2em;
-        }
-
-        .contact-form {
-            text-align: center;
-        }
-
-        .contact-form .form-group {
-            margin: 10px 0;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 80%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .contact-form button {
-            padding: 10px 20px;
-            background: #48503a; /* Main color */
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .contact-form button:hover {
-            background: #6b7753; /* Complementary hover color */
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Little Juneberry Photography</title>
+  <meta name="description" content="Contact Little Juneberry Photography for inquiries about our services. Reach out via email or follow us on social media.">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Lato Font for body text -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
+  <!-- Signatura Monoline Script Font for headings -->
+  <link rel="stylesheet" href="https://facings.com/fonts/SignaturaMonolineScript.css">
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Lato', sans-serif;
+      background-image: url("Juneberry.JPG");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #333;
+    }
+    
+    /* Header */
+    header {
+      background: linear-gradient(45deg, #48503a, #6b7753);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .header-container h1 {
+      margin: 0;
+      font-size: 2.8em;
+      font-family: 'Signatura Monoline Script', cursive;
+    }
+    
+    .separator-horizontal {
+      height: 2px;
+      background: white;
+      width: 100%;
+      margin: 10px 0;
+    }
+    
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 0;
+    }
+    
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      transition: color 0.3s, border-bottom 0.3s;
+      padding-bottom: 2px;
+    }
+    
+    .nav-links a:hover {
+      color: #6b7753;
+      border-bottom: 2px solid #6b7753;
+    }
+    
+    .dropdown {
+      position: relative;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: #48503a;
+      min-width: 120px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 5px;
+      padding: 10px;
+      z-index: 1000;
+    }
+    
+    .dropdown-content a {
+      text-decoration: none;
+      color: white;
+      display: block;
+      padding: 8px;
+      transition: color 0.3s;
+    }
+    
+    .dropdown-content a:hover {
+      color: #6b7753;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+    /* Contact Container */
+    .contact-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    
+    .contact-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .contact-header h2 {
+      font-size: 2.2em;
+      font-family: 'Signatura Monoline Script', cursive;
+      margin-bottom: 10px;
+      color: #48503a;
+    }
+    
+    .contact-header p {
+      font-size: 1.1em;
+      margin-bottom: 20px;
+    }
+    
+    /* Social Icons */
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .social-icons a {
+      color: #48503a;
+      transition: color 0.3s;
+    }
+    
+    .social-icons a:hover {
+      color: #6b7753;
+    }
+    
+    .social-icons i {
+      font-size: 2em;
+    }
+    
+    /* Contact Form */
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .contact-form h2 {
+      text-align: center;
+      font-size: 2em;
+      font-family: 'Signatura Monoline Script', cursive;
+      color: #48503a;
+      margin-bottom: 20px;
+    }
+    
+    .contact-form .form-group {
+      margin: 15px 0;
+      text-align: left;
+    }
+    
+    .contact-form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+    
+    .contact-form textarea {
+      resize: vertical;
+    }
+    
+    .contact-form button {
+      display: block;
+      width: 200px;
+      margin: 20px auto 0;
+      padding: 10px 20px;
+      background: #48503a;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+      font-size: 1em;
+    }
+    
+    .contact-form button:hover {
+      background: #6b7753;
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      header {
+        padding: 10px;
+      }
+      
+      .header-container h1 {
+        font-size: 1.8em;
+      }
+      
+      .nav-links a {
+        font-size: 0.9em;
+      }
+    }
+    
+    /* Footer */
+    footer {
+      background: #48503a;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      border-radius: 0 0 10px 10px;
+      margin-top: 30px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <h1>Little Juneberry Photography</h1>
-            <div class="separator-horizontal"></div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li class="dropdown">
-                        <a href="#">Services</a>
-                        <ul class="dropdown-content">
-                            <li><a href="engagement.html">Engagement</a></li>
-                            <li><a href="family.html">Family</a></li>
-                            <li><a href="wedding.html">Wedding</a></li>
-                            <li><a href="special-occasion.html">Special Occasion</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li class="contact-link"><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="separator-horizontal"></div>
-        </div>
-    </header>
-
-    <div class="contact-container">
-        <div class="contact-header">
-            <h2>Contact Us</h2>
-            <p>Reach out to Little Juneberry Photography for inquiries about our services. We're here to help!</p>
-        </div>
-
-        <div class="social-icons">
-            <a href="https://www.instagram.com/littlejuneberryphotography/"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/littlejuneberryphotography/"><i class="fab fa-facebook-f"></i></a>
-        </div>
-
-        <div class="contact-form" id="contact">
-            <h2>Contact Me</h2>
-            <form action="https://formspree.io/f/mleqvgpz" method="post"> 
-                <div class="form-group">
-                    <label for="first-name">First Name*</label>
-                    <input type="text" id="first-name" name="first-name" required>
-                </div>
-                <div class="form-group">
-                    <label for="last-name">Last Name*</label>
-                    <input type="text" id="last-name" name="last-name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email*</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="service-interest">What service are you interested in?*</label>
-                    <select id="service-interest" name="service-interest" required>
-                        <option value="">Select</option>
-                        <option value="engagement">Engagement</option>
-                        <option value="family">Family</option>
-                        <option value="wedding">Wedding</option>
-                        <option value="special-occasion">Special Occasion</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="how-hear">How did you hear about us?*</label>
-                    <select id="how-hear" name="how-hear" required>
-                        <option value="">Select</option>
-                        <option value="internet">Internet Search</option>
-                        <option value="social-media">Social Media</option>
-                        <option value="referral">Referral</option>
-                        <option value="advertisement">Advertisement</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="more-info">Let Us Know All the Details!</label>
-                    <textarea id="more-info" name="more-info" rows="4" required></textarea>
-                </div>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
+  <!-- Header with Navigation -->
+  <header>
+    <div class="header-container">
+      <h1>Little Juneberry Photography</h1>
+      <div class="separator-horizontal"></div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="dropdown">
+            <a href="#">Services</a>
+            <ul class="dropdown-content">
+              <li><a href="engagement.html">Engagement</a></li>
+              <li><a href="family.html">Family</a></li>
+              <li><a href="wedding.html">Wedding</a></li>
+              <li><a href="special-occasion.html">Special Occasion</a></li>
+            </ul>
+          </li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="separator-horizontal"></div>
     </div>
-
-    <footer>
-        <div class="footer-content">
-            &copy; 2024 Little Juneberry Photography. All rights reserved.
+  </header>
+  
+  <!-- Main Contact Container -->
+  <div class="contact-container">
+    <div class="contact-header">
+      <h2>Contact Us</h2>
+      <p>Reach out to Little Juneberry Photography for inquiries about our services. We're here to help!</p>
+    </div>
+    
+    <div class="social-icons">
+      <a href="https://www.instagram.com/littlejuneberryphotography/"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/littlejuneberryphotography/"><i class="fab fa-facebook-f"></i></a>
+    </div>
+    
+    <div class="contact-form" id="contact">
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/f/mleqvgpz" method="post">
+        <div class="form-group">
+          <label for="first-name">First Name*</label>
+          <input type="text" id="first-name" name="first-name" required>
         </div>
-    </footer>
+        <div class="form-group">
+          <label for="last-name">Last Name*</label>
+          <input type="text" id="last-name" name="last-name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email*</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <!-- New Phone Number Field -->
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+        <div class="form-group">
+          <label for="service-interest">What service are you interested in?*</label>
+          <select id="service-interest" name="service-interest" required>
+            <option value="">Select</option>
+            <option value="engagement">Engagement</option>
+            <option value="family">Family</option>
+            <option value="wedding">Wedding</option>
+            <option value="special-occasion">Special Occasion</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="how-hear">How did you hear about us?*</label>
+          <select id="how-hear" name="how-hear" required>
+            <option value="">Select</option>
+            <option value="internet">Internet Search</option>
+            <option value="social-media">Social Media</option>
+            <option value="referral">Referral</option>
+            <option value="advertisement">Advertisement</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="more-info">Let Us Know All the Details!</label>
+          <textarea id="more-info" name="more-info" rows="4" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      &copy; 2024 Little Juneberry Photography. All rights reserved.
+    </div>
+  </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-

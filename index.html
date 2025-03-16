@@ -1,379 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Little Juneberry Photography - Minnesota and Wisconsin Photographer Allie Eastwood</title>
-    <meta name="description" content="Discover Allie Eastwood's Photography services in Minnesota and Wisconsin. Capture the magic of your special day with creativity and care. Contact Allie to preserve your wedding memories.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
-    <style>
-        /* Your CSS styles */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Lato', sans-serif;
-            background: #f5f5f5;
-        }
-
-        header {
-            background: #48503a; /* Main color */
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .header-container h1 {
-            margin: 0;
-            font-size: 2em;
-        }
-
-        .separator-horizontal {
-            height: 2px;
-            background: white;
-            width: 100%;
-            margin: 10px 0;
-        }
-
-        .nav-links {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: white;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #6b7753; /* Complementary hover color */
-        }
-
-        .dropdown {
-            position: relative;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background: #48503a; /* Main color */
-            color: white;
-            min-width: 120px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-            padding: 10px;
-            z-index: 1000; /* Higher z-index to ensure it appears above other elements */
-        }
-
-        .dropdown-content a {
-            color: white;
-            text-decoration: none;
-            padding: 8px;
-            display: block;
-        }
-
-        .dropdown-content a:hover {
-            color: #6b7753; /* Complementary hover color */
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .main-container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .slideshow-container {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .mySlides {
-            display: none;
-        }
-
-        .image-box {
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .image-box img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            max-width: 100%;
-            transition: transform 0.3s;
-        }
-
-        .image-box img:hover {
-            transform: scale(1.05);
-        }
-
-        .description {
-            text-align: center;
-            margin-top: 10px;
-            font-size: 1.2em;
-        }
-
-        .about-photographer {
-            text-align: center;
-            margin: 40px 0;
-        }
-
-        .about-photographer h2 {
-            font-size: 2em;
-            color: #48503a; /* Main color */
-        }
-
-        .about-photographer p {
-            font-size: 1.1em;
-            line-height: 1.6;
-            color: #333; /* Complementary text color */
-        }
-
-        .contact-button {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .contact-button a {
-            padding: 10px 20px;
-            background: #48503a; /* Main color */
-            color: white;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background 0.3s;
-        }
-
-        .contact-button a:hover {
-            background: #6b7753; /* Complementary hover color */
-        }
-
-        .social-icons {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .social-icons a {
-            color: #48503a; /* Main color */
-            font-size: 1.5em;
-            margin: 0 10px;
-            transition: color 0.3s;
-        }
-
-        .social-icons a:hover {
-            color: #6b7753; /* Complementary hover color */
-        }
-
-        footer {
-            background: #48503a; /* Main color */
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .nav-links {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .dropdown-content {
-                position: static; /* Ensures dropdown appears below */
-                box-shadow: none; /* No shadow for narrower screens */
-            }
-
-            .slideshow-container {
-                max-width: 100%;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header {
-                padding: 10px 15px; /* Reduced padding */
-            }
-
-            .header-container h1 {
-                font-size: 1.5em; /* Adjusted font size */
-                margin-bottom: 5px; /* Reduced margin */
-            }
-
-            .nav-links {
-                gap: 10px;
-            }
-
-            .nav-links a {
-                font-size: 0.9em; /* Reduced font size */
-            }
-
-            .contact-button a {
-                padding: 8px 16px;
-            }
-        }
-    </style>
-    <!-- JSON-LD structured data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Little Juneberry Photography",
-      "description": "Photography services in Minnesota and Wisconsin by Allie Eastwood. Specializing in Weddings, Engagements, Family, and Special Occasions.",
-      "url": "http://www.littlejuneberryphotography.com",
-      "logo": "http://www.littlejuneberryphotography.com/logo.png",
-      "image": "http://www.littlejuneberryphotography.com/portfolio.jpg",
-      "sameAs": [
-        "https://www.instagram.com/littlejuneberryphotography/",
-        "https://www.facebook.com/profile.php?id=100094520224957&mibextid=LQQJ4d"
-      ]
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Little Juneberry Photography - Minnesota and Wisconsin Photographer Allie Eastwood</title>
+  <meta name="description" content="Discover Allie Eastwood's Photography services in Minnesota and Wisconsin. Capture the magic of your special day with creativity and care. Contact Allie to preserve your wedding memories.">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Lato Font for body text -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
+  <!-- Signatura Monoline Script Font for photography (assumed hosted at Facings.com) -->
+  <link rel="stylesheet" href="https://facings.com/fonts/SignaturaMonolineScript.css">
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Lato', sans-serif;
+      background: #c2b59e; /* Warm Taupe for Body Background */
+      color: #333;
     }
-    </script>
+    
+    /* Header Styling */
+    header {
+      background: linear-gradient(45deg, #48503a, #6b7753); /* Subtle Gradient */
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .header-container h1 {
+      margin: 0;
+      font-size: 2.8em;
+      font-family: 'Signatura Monoline Script', cursive;
+    }
+    
+    .separator-horizontal {
+      height: 2px;
+      background: white;
+      width: 100%;
+      margin: 10px 0;
+    }
+    
+    .nav-links {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 0;
+    }
+    
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-size: 1em;
+      transition: color 0.3s, border-bottom 0.3s;
+      padding-bottom: 2px;
+    }
+    
+    .nav-links a:hover {
+      color: #6b7753; /* Complementary Hover Color */
+      border-bottom: 2px solid #6b7753;
+    }
+    
+    .dropdown {
+      position: relative;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: #48503a;
+      color: white;
+      min-width: 120px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      padding: 10px;
+      z-index: 1000;
+    }
+    
+    .dropdown-content a {
+      color: white;
+      text-decoration: none;
+      padding: 8px;
+      display: block;
+      transition: color 0.3s;
+    }
+    
+    .dropdown-content a:hover {
+      color: #6b7753;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+    /* Main Container */
+    .main-container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #e2d4c3; /* Light Taupe for Main Content Container */
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Slideshow Container */
+    .slideshow-container {
+      max-width: 800px;
+      margin: 0 auto 30px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .mySlides {
+      display: none;
+    }
+    
+    /* Fade Animation for Slides */
+    .fadeIn {
+      animation: fadeInAnimation 1s;
+    }
+    
+    @keyframes fadeInAnimation {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    .image-box {
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .image-box img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+    
+    .image-box img:hover {
+      transform: scale(1.05);
+    }
+    
+    .description {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 1.2em;
+    }
+    
+    /* About Section */
+    .about-photographer {
+      text-align: center;
+      margin: 40px 0;
+    }
+    
+    .about-photographer h2 {
+      font-size: 2em;
+      color: #48503a;
+      margin-bottom: 10px;
+      font-family: 'Signatura Monoline Script', cursive;
+    }
+    
+    .about-photographer p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+    
+    /* Contact Button */
+    .contact-button {
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+    .contact-button a {
+      padding: 12px 30px;
+      background: #48503a;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1em;
+      transition: background 0.3s;
+    }
+    
+    .contact-button a:hover {
+      background: #6b7753;
+    }
+    
+    /* Social Icons */
+    .social-icons {
+      text-align: center;
+      margin-top: 30px;
+    }
+    
+    .social-icons a {
+      color: #48503a;
+      font-size: 1.8em;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+    
+    .social-icons a:hover {
+      color: #6b7753;
+    }
+    
+    /* Footer Styling */
+    footer {
+      background: #48503a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 30px;
+      border-radius: 0 0 10px 10px;
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      .dropdown-content {
+        position: static;
+        box-shadow: none;
+      }
+      
+      .slideshow-container {
+        max-width: 100%;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      header {
+        padding: 10px 15px;
+      }
+      
+      .header-container h1 {
+        font-size: 1.8em;
+      }
+      
+      .nav-links a {
+        font-size: 0.9em;
+      }
+      
+      .contact-button a {
+        padding: 10px 20px;
+      }
+    }
+  </style>
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Little Juneberry Photography",
+    "description": "Photography services in Minnesota and Wisconsin by Allie Eastwood. Specializing in Weddings, Engagements, Family, and Special Occasions.",
+    "url": "http://www.littlejuneberryphotography.com",
+    "logo": "http://www.littlejuneberryphotography.com/logo.png",
+    "image": "http://www.littlejuneberryphotography.com/portfolio.jpg",
+    "sameAs": [
+      "https://www.instagram.com/littlejuneberryphotography/",
+      "https://www.facebook.com/profile.php?id=100094520224957&mibextid=LQQJ4d"
+    ]
+  }
+  </script>
 </head>
 <body>
-    <!-- Header with navigation -->
-    <header>
-        <div class="header-container">
-            <h1>Little Juneberry Photography</h1> <!-- Header text -->
-            <nav>
-                <ul class="nav-links"> <!-- Navigation links -->
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li class="dropdown">
-                        <a href="#">Services</a> <!-- Dropdown with sub-links -->
-                        <ul class="dropdown-content">
-                            <li><a href="wedding.html">Wedding</a></li>
-                            <li><a href="engagement.html">Engagement</a></li>
-                            <li><a href="family.html">Family</a></li>
-                            <li><a href="special-occasion.html">Special Occasion</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+  <!-- Header with Navigation -->
+  <header>
+    <div class="header-container">
+      <h1>Little Juneberry Photography</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="dropdown">
+            <a href="#">Services</a>
+            <ul class="dropdown-content">
+              <li><a href="wedding.html">Wedding</a></li>
+              <li><a href="engagement.html">Engagement</a></li>
+              <li><a href="family.html">Family</a></li>
+              <li><a href="special-occasion.html">Special Occasion</a></li>
+            </ul>
+          </li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="separator-horizontal"></div>
+  </header>
+
+  <!-- Main Content Area -->
+  <div class="main-container">
+    <main>
+      <!-- Slideshow Container -->
+      <div class="slideshow-container">
+        <!-- Slide 1 -->
+        <div class="mySlides">
+          <div class="image-box">
+            <img src="Portfolio32.jpg" alt="Wedding Photography by Allie Eastwood in Minnesota and Wisconsin">
+          </div>
+          <div class="description">Capturing life's greatest moments.</div>
         </div>
-        <div class="separator-horizontal"></div> <!-- Horizontal separator -->
-    </header>
-
-    <!-- Main content area -->
-    <div class="main-container">
-        <main>
-            <!-- Slideshow container -->
-            <div class="slideshow-container">
-                <!-- Slide 1 -->
-                <div class="mySlides">
-                    <div class="image-box">
-                        <img src="Portfolio32.jpg" alt="Wedding Photography by Allie Eastwood in Minnesota and Wisconsin"> <!-- Slide image -->
-                    </div>
-                    <div class="description">Capturing life's greatest moments.</div> <!-- Description under image -->
-                </div>
-
-                <!-- Slide 2 -->
-                <div class="mySlides">
-                    <div class="image-box">
-                        <img src="Portfolio12.jpg" alt="Engagement Photography by Allie Eastwood in Minnesota and Wisconsin"> <!-- Slide image -->
-                    </div>
-                    <div class="description">Capturing life's greatest moments.</div> <!-- Description under image -->
-                </div>
-
-                <!-- Slide 3 -->
-                <div class="mySlides">
-                    <div class="image-box">
-                        <img src="Portfolio36.jpg" alt="Family Photography by Allie Eastwood in Minnesota and Wisconsin"> <!-- Slide image -->
-                    </div>
-                    <div class="description">Capturing life's greatest moments.</div> <!-- Description under image -->
-                </div>
-
-                <!-- Slide 4 -->
-                <div class="mySlides">
-                    <div class="image-box">
-                        <img src="Portfolio17.jpg" alt="Special Occasion Photography by Allie Eastwood in Minnesota and Wisconsin"> <!-- Slide image -->
-                    </div>
-                    <div class="description">Capturing life's greatest moments.</div> <!-- Description under image -->
-                </div>
-            </div>
-            
-            <!-- Section with text description -->
-            <section class="about-photographer">
-                <h2>Welcome to Little Juneberry Photography</h2> <!-- Centered heading -->
-                <p>I'm Allie, a photographer based in Minnesota and Wisconsin, specializing in Weddings, Engagements, Family, and Special Occasions.</p>
-                <p>Explore my portfolio and contact me to discuss your photography needs. I look forward to working with you!</p>
-            </section>
-        </main>
-
-        <!-- Social media icons -->
-        <div class="social-icons"> <!-- Links to social media -->
-            <a href="https://www.instagram.com/littlejuneberryphotography/">
-                <i class="fab fa-instagram"></i> <!-- Instagram icon -->
-            </a>
-            <a href="https://www.facebook.com/profile.php?id=100094520224957&mibextid=LQQJ4d">
-                <i class="fab fa-facebook-f"></i> <!-- Facebook icon -->
-            </a>
+        <!-- Slide 2 -->
+        <div class="mySlides">
+          <div class="image-box">
+            <img src="Portfolio12.jpg" alt="Engagement Photography by Allie Eastwood in Minnesota and Wisconsin">
+          </div>
+          <div class="description">Capturing life's greatest moments.</div>
         </div>
-        
-        <!-- Footer -->
-        <footer>
-            &copy; 2024 Little Juneberry Photography. All rights reserved. <!-- Copyright text -->
-        </footer>
-    </div> <!-- End of container -->
+        <!-- Slide 3 -->
+        <div class="mySlides">
+          <div class="image-box">
+            <img src="Portfolio36.jpg" alt="Family Photography by Allie Eastwood in Minnesota and Wisconsin">
+          </div>
+          <div class="description">Capturing life's greatest moments.</div>
+        </div>
+        <!-- Slide 4 -->
+        <div class="mySlides">
+          <div class="image-box">
+            <img src="Portfolio17.jpg" alt="Special Occasion Photography by Allie Eastwood in Minnesota and Wisconsin">
+          </div>
+          <div class="description">Capturing life's greatest moments.</div>
+        </div>
+      </div>
+      
+      <!-- Section with Text Description -->
+      <section class="about-photographer">
+        <h2>Welcome to Little Juneberry Photography</h2>
+        <p>I'm Allie, a photographer based in Minnesota and Wisconsin, specializing in Weddings, Engagements, Family, and Special Occasions.</p>
+        <p>Explore my portfolio and contact me to discuss your photography needs. I look forward to working with you!</p>
+      </section>
+      
+      <!-- Call-to-Action Button -->
+      <div class="contact-button">
+        <a href="contact.html">Contact Me</a>
+      </div>
+    </main>
 
-    <!-- JavaScript for slideshow -->
-    <script>
-    let slideIndex = 0; // Current slide index
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+      <a href="https://www.instagram.com/littlejuneberryphotography/"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=100094520224957&mibextid=LQQJ4d"><i class="fab fa-facebook-f"></i></a>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+      &copy; 2024 Little Juneberry Photography. All rights reserved.
+    </footer>
+  </div>
 
-    function showSlides() { // Display each slide in turn
-        let slides = document.getElementsByClassName("mySlides");
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none"; // Hide all slides initially
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {
-            slideIndex = 1; // Loop back to first slide
-        }
-        slides[slideIndex - 1].style.display = "block"; // Display current slide
-        setTimeout(showSlides, 2000); // Auto-cycle every 2 seconds
+  <!-- JavaScript for Slideshow with Fade Effect -->
+  <script>
+    let slideIndex = 0;
+    function showSlides() {
+      let slides = document.getElementsByClassName("mySlides");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        slides[i].classList.remove("fadeIn");
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      slides[slideIndex - 1].style.display = "block";
+      slides[slideIndex - 1].classList.add("fadeIn");
+      setTimeout(showSlides, 4000);
     }
-
-    showSlides(); // Initialize the slideshow
-    </script>
+    showSlides();
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

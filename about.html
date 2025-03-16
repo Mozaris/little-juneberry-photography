@@ -1,343 +1,470 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Allie Eastwood</title>
-    <meta name="description" content="Learn more about Allie Eastwood, a photographer based in Minnesota and Wisconsin. Discover her passion for capturing life's moments and how she can help you preserve your memories.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
-    <style>
-        /* Your CSS styles */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Lato', sans-serif;
-            background: #f5f5f5;
-        }
-
-        header {
-            background: #48503a; /* Main color */
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .header-container h1 {
-            margin: 0;
-            font-size: 2em;
-        }
-
-        .separator-horizontal {
-            height: 2px;
-            background: white;
-            width: 100%;
-            margin: 10px 0;
-        }
-
-        .nav-links {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: white;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #6b7753; /* Complementary hover color */
-        }
-
-        .dropdown {
-            position: relative;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background: #48503a; /* Main color */
-            color: white;
-            min-width: 120px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-            padding: 10px;
-        }
-
-        .dropdown-content a {
-            color: white;
-            text-decoration: none;
-            padding: 8px;
-            display: block;
-        }
-
-        .dropdown-content a:hover {
-            color: #6b7753; /* Complementary hover color */
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .main-container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .two-column-layout {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .image-box {
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .image-box img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            transition: transform 0.3s;
-        }
-
-        .image-box img:hover {
-            transform: scale(1.05);
-        }
-
-        .right-column {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .contact-button {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .contact-button a {
-            padding: 10px 20px;
-            background: #48503a; /* Main color */
-            color: white;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background 0.3s;
-        }
-
-        .contact-button a:hover {
-            background: #6b7753; /* Complementary hover color */
-        }
-
-        .contact-form {
-            padding: 30px;
-            background: #f9f9f9;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            margin-top: 30px;
-        }
-
-        .contact-form h2 {
-            text-align: center;
-        }
-
-        .contact-form .form-group {
-            margin-bottom: 20px;
-        }
-
-        .contact-form .form-group label {
-            font-weight: bold;
-            display: block;
-        }
-
-        .contact-form input,
-        .contact-form select,
-        .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-        }
-
-        .contact-form button {
-            padding: 12px 25px;
-            background: #48503a; /* Main color */
-            color: white;
-            border-radius: 5px;
-            border: none;
-            transition: background 0.3s;
-            cursor: pointer;
-        }
-
-        .contact-form button:hover {
-            background: #6b7753; /* Complementary hover color */
-        }
-
-        .social-icons {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .social-icons a {
-            color: #48503a; /* Main color */
-            font-size: 1.5em;
-            margin: 0 10px;
-            transition: color 0.3s;
-        }
-
-        .social-icons a:hover {
-            color: #6b7753; /* Complementary hover color */
-        }
-
-        footer {
-            background: #48503a; /* Main color */
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .nav-links {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .two-column-layout {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-form {
-                padding: 20px;
-            }
-
-            .dropdown-content {
-                position: static; /* Ensures dropdown appears below */
-                box-shadow: none; /* No shadow for narrower screens */
-            }
-        }
-
-        @media (max-width: 480px) {
-            header {
-                padding: 10px 15px; /* Reduced padding */
-            }
-
-            .header-container h1 {
-                font-size: 1.5em; /* Adjusted font size */
-                margin-bottom: 5px; /* Reduced margin */
-            }
-
-            .nav-links {
-                gap: 10px;
-            }
-
-            .nav-links a {
-                font-size: 0.9em; /* Reduced font size */
-            }
-
-            .contact-form {
-                padding: 20px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me - Allie Eastwood</title>
+  <meta name="description" content="Learn more about Allie Eastwood, a photographer based in Minnesota and Wisconsin. Discover her passion for capturing life's moments and how she can help you preserve your memories.">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Lato Font for body text -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
+  <!-- Signatura Monoline Script Font for headings -->
+  <link rel="stylesheet" href="https://facings.com/fonts/SignaturaMonolineScript.css">
+  <style>
+    /* Root Variables */
+    :root {
+      --primary-color: #48503a;
+      --secondary-color: #6b7753;
+      --background-color: #c2b59e; /* Warm Taupe */
+      --container-bg: #e2d4c3; /* Light Taupe */
+      --text-color: #333;
+      --transition-speed: 0.3s;
+      --border-radius: 10px;
+      --max-width: 1200px;
+    }
+    
+    /* Global Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Lato', sans-serif;
+      background: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+    
+    /* Header */
+    header {
+      background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    .header-container {
+      max-width: var(--max-width);
+      margin: auto;
+    }
+    
+    .header-container h1 {
+      font-size: 2.8em;
+      font-family: 'Signatura Monoline Script', cursive;
+      margin: 0;
+    }
+    
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+    }
+    
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      transition: color var(--transition-speed), border-bottom var(--transition-speed);
+      padding-bottom: 2px;
+    }
+    
+    .nav-links a:hover {
+      color: var(--secondary-color);
+      border-bottom: 2px solid var(--secondary-color);
+    }
+    
+    .dropdown {
+      position: relative;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: var(--primary-color);
+      min-width: 120px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: var(--border-radius);
+      padding: 10px;
+      z-index: 1000;
+    }
+    
+    .dropdown-content a {
+      color: white;
+      text-decoration: none;
+      padding: 8px;
+      display: block;
+      transition: color var(--transition-speed);
+    }
+    
+    .dropdown-content a:hover {
+      color: var(--secondary-color);
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+    .separator-horizontal {
+      height: 2px;
+      background: white;
+      width: 100%;
+      margin: 10px 0;
+    }
+    
+    /* Main Container */
+    .main-container {
+      max-width: var(--max-width);
+      margin: 30px auto;
+      padding: 20px;
+      background: var(--container-bg);
+      border-radius: var(--border-radius);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    
+    /* Two-Column Layout */
+    .two-column-layout {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    
+    /* Image Box */
+    .image-box {
+      overflow: hidden;
+      border-radius: var(--border-radius);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    
+    .image-box img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transition: transform var(--transition-speed);
+    }
+    
+    .image-box img:hover {
+      transform: scale(1.05);
+    }
+    
+    /* Right Column */
+    .right-column {
+      padding: 20px;
+    }
+    
+    .right-column h2 {
+      font-size: 2em;
+      font-family: 'Signatura Monoline Script', cursive;
+      margin-bottom: 15px;
+      color: var(--primary-color);
+    }
+    
+    .right-column p {
+      font-size: 1.1em;
+      margin-bottom: 15px;
+    }
+    
+    .contact-button {
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+    .contact-button a {
+      padding: 12px 30px;
+      background: var(--primary-color);
+      color: white;
+      border-radius: var(--border-radius);
+      text-decoration: none;
+      transition: background var(--transition-speed);
+    }
+    
+    .contact-button a:hover {
+      background: var(--secondary-color);
+    }
+    
+    /* Contact Form */
+    .contact-form {
+      background: #fff;
+      color: var(--text-color);
+      padding: 30px;
+      border-radius: var(--border-radius);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+    
+    .contact-form h2 {
+      text-align: center;
+      font-size: 2em;
+      font-family: 'Signatura Monoline Script', cursive;
+      margin-bottom: 20px;
+      color: var(--primary-color);
+    }
+    
+    .contact-form .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .contact-form .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 700;
+    }
+    
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+      font-family: 'Lato', sans-serif;
+    }
+    
+    .contact-form textarea {
+      resize: vertical;
+    }
+    
+    .contact-form button {
+      padding: 12px 25px;
+      background: var(--primary-color);
+      color: white;
+      border-radius: var(--border-radius);
+      border: none;
+      transition: background var(--transition-speed);
+      cursor: pointer;
+      font-weight: 700;
+    }
+    
+    .contact-form button:hover {
+      background: var(--secondary-color);
+    }
+    
+    /* Social Media Icons */
+    .social-icons {
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+    .social-icons a {
+      color: var(--primary-color);
+      font-size: 1.8em;
+      margin: 0 10px;
+      transition: color var(--transition-speed);
+    }
+    
+    .social-icons a:hover {
+      color: var(--secondary-color);
+    }
+    
+    /* Footer */
+    footer {
+      background: var(--primary-color);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      border-radius: 0 0 var(--border-radius) var(--border-radius);
+      margin-top: 30px;
+    }
+    
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      .two-column-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      header {
+        padding: 10px;
+      }
+      
+      .header-container h1 {
+        font-size: 1.8em;
+      }
+      
+      .nav-links a {
+        font-size: 0.9em;
+      }
+      
+      .contact-form {
+        padding: 20px;
+      }
+    }
+  </style>
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Little Juneberry Photography",
+    "description": "Learn more about Allie Eastwood, a photographer based in Minnesota and Wisconsin. Discover her passion for capturing life's moments and how she can help you preserve your memories.",
+    "url": "http://www.littlejuneberryphotography.com",
+    "logo": "http://www.littlejuneberryphotography.com/logo.png",
+    "image": "http://www.littlejuneberryphotography.com/portfolio.jpg",
+    "telephone": "+1-701-123-4567",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Main Street",
+      "addressLocality": "Fargo",
+      "addressRegion": "ND",
+      "postalCode": "58102",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://www.instagram.com/littlejuneberryphotography/",
+      "https://www.facebook.com/profile.php?id=100094520224957&mibextid=LQQJ4d"
+    ]
+  }
+  </script>
 </head>
 <body>
-    <!-- Header with navigation -->
-    <header>
-        <div class="header-container">
-            <h1>Allie Eastwood</h1>
-            <div class="separator-horizontal"></div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li class="dropdown">
-                        <a href="#">Services</a>
-                        <ul class="dropdown-content">
-                            <li><a href="wedding.html">Wedding</a></li>
-                            <li><a href="engagement.html">Engagement</a></li>
-                            <li><a href="family.html">Family</a></li>
-                            <li><a href="special-occasion.html">Special Occasion</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="separator-horizontal"></div>
-        </div>
-    </header>
-
-    <!-- Main content area -->
-    <div class="main-container">
-        <div class="two-column-layout">
-            <div class="image-box">
-                <img src="Allie.jpg" alt="Allie Eastwood">
-            </div>
-
-            <div class="right-column">
-                <h2>About Me</h2>
-                <div class="paragraph-box">
-                    <p>Welcome to my photography page. I'm a proud mom of two adorable little girls, and wife to my amazing husband. We live a busy, fun-filled life with our two lovable dogs, and we wouldn't have it any other way.</p>
-                </div>
-                <div class="paragraph-box">
-                    <p>Sewing is one of my favorite hobbies—it helps me relax and get creative. I think that's why I'm so drawn to photography too—it's all about capturing those unique moments and stitching them together into stories we can cherish forever.</p>
-                </div>
-                <div class="paragraph-box">
-                    <p>As a photographer, I love working with families and individuals to create images that feel real, warm, and full of life.</p>
-                </div>
-                <div class="contact-button">
-                    <a href="contact.html">Contact Me</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="social-icons">
-            <a href="https://www.instagram.com/littlejuneberryphotography/">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.facebook.com/profile.php?id=100094520224957">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-        </div>
+  <!-- Header with Navigation -->
+  <header>
+    <div class="header-container">
+      <h1>Allie Eastwood</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="dropdown">
+            <a href="#" aria-haspopup="true" aria-expanded="false">Services <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-content" aria-label="submenu">
+              <li><a href="wedding.html">Wedding</a></li>
+              <li><a href="engagement.html">Engagement</a></li>
+              <li><a href="family.html">Family</a></li>
+              <li><a href="special-occasion.html">Special Occasion</a></li>
+            </ul>
+          </li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-
-    <!-- Footer -->
-    <footer>
-        &copy; 2024 Little Juneberry Photography. All rights reserved.
-    </footer>
+    <div class="separator-horizontal"></div>
+  </header>
+  
+  <!-- Main Content Area -->
+  <div class="main-container">
+    <div class="two-column-layout">
+      <!-- Image Column -->
+      <div class="image-box">
+        <img src="Allie.jpg" alt="Allie Eastwood">
+      </div>
+      <!-- Content Column -->
+      <div class="right-column">
+        <h2>About Me</h2>
+        <p>
+          Welcome to my photography page. I'm Allie, a proud mom of two adorable little girls, and wife to my amazing husband. We live a busy, fun-filled life with our two lovable dogs, and we wouldn't have it any other way.
+        </p>
+        <p>
+          Sewing is one of my favorite hobbies—it helps me relax and get creative. I think that's why I'm so drawn to photography too—it's all about capturing those unique moments and stitching them together into stories we can cherish forever.
+        </p>
+        <p>
+          As a photographer, I love working with families and individuals to create images that feel real, warm, and full of life. My goal is to provide you with timeless photos that you'll treasure for years to come.
+        </p>
+        <div class="contact-button">
+          <a href="contact.html">Contact Me</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Contact Form -->
+    <div class="contact-form" id="contact">
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/f/mleqvgpz" method="post">
+        <div class="form-group">
+          <label for="first-name">First Name*</label>
+          <input type="text" id="first-name" name="first-name" required>
+        </div>
+        <div class="form-group">
+          <label for="last-name">Last Name*</label>
+          <input type="text" id="last-name" name="last-name" required>
+        </div>
+        <div class="form-group">
+          <label for="fiance-first">Fiancé's First Name*</label>
+          <input type="text" id="fiance-first" name="fiance-first" required>
+        </div>
+        <div class="form-group">
+          <label for="fiance-last">Fiancé's Last Name*</label>
+          <input type="text" id="fiance-last" name="fiance-last" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email*</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number*</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+          <label for="service-interest">Which Service Are You Interested In?*</label>
+          <select id="service-interest" name="service-interest" required>
+            <option value="engagement">Engagement</option>
+            <option value="wedding">Wedding</option>
+            <option value="family">Family</option>
+            <option value="special-occasion">Special Occasion</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="preferred-date">Preferred Date for Engagement Session*</label>
+          <input type="date" id="preferred-date" name="preferred-date" required>
+        </div>
+        <div class="form-group">
+          <label for="preferred-location">Preferred Location for the Session*</label>
+          <input type="text" id="preferred-location" name="preferred-location" required>
+        </div>
+        <div class="form-group">
+          <label for="how-did-you-hear">How Did You Hear About Me?*</label>
+          <select id="how-did-you-hear" name="how-did-you-hear" required>
+            <option value="internet">Internet Search</option>
+            <option value="social-media">Social Media</option>
+            <option value="referral">Referral</option>
+            <option value="advertisement">Advertisement</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="additional-info">Additional Information*</label>
+          <textarea id="additional-info" name="additional-info" rows="4" placeholder="Any additional details you'd like to share?" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+      <a href="https://www.instagram.com/littlejuneberryphotography/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=100094520224957&mibextid=LQQJ4d" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="tagline">
+        Capturing life's moments, one photo at a time.
+      </div>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/littlejuneberryphotography/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100094520224957&mibextid=LQQJ4d" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2024 Little Juneberry Photography. All rights reserved.
+    </div>
+  </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
