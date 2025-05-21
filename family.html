@@ -10,6 +10,7 @@
   <!-- Google Fonts: Lato for body, Signatura Monoline Script for headings -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Signatura+Monoline+Script&display=swap">
   <style>
+    
     :root {
       --primary-color: #48503a;
       --secondary-color: #6b7753;
@@ -21,6 +22,18 @@
       --border-radius: 10px;
       --max-width: 1200px;
     }
+    @font-face {
+  font-family: 'Signatura Monoline Script';
+  src: url('fonts/SignaturaMonolineScript.ttf/Signatura Monoline.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* Use custom font for main headlines only */
+h1, h2, .headline {
+  font-family: 'Signatura Monoline Script', cursive;
+}
     /* Global Reset */
     * {
       box-sizing: border-box;

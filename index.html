@@ -9,9 +9,23 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <!-- Lato Font for body text -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
-  <!-- Signatura Monoline Script Font for photography (assumed hosted at Facings.com) -->
-  <link rel="stylesheet" href="https://facings.com/fonts/SignaturaMonolineScript.css">
   <style>
+    /* Load Signatura Monoline Script from Dafont.com – 
+       Download the font and place it in a local "fonts" folder. */
+@font-face {
+  font-family: 'Signatura Monoline Script';
+  src: url('fonts/SignaturaMonolineScript.ttf/Signatura Monoline.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* Use custom font for main headlines only */
+h1, h2, .headline {
+  font-family: 'Signatura Monoline Script', cursive;
+}
+
+
     /* Global Styles */
     body {
       margin: 0;
@@ -28,6 +42,11 @@
       padding: 20px;
       text-align: center;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
     }
     
     .header-container h1 {
@@ -238,19 +257,15 @@
     
     @media (max-width: 480px) {
       header {
-        padding: 10px 15px;
+        padding: 10px; /* Matching portfolio mobile header padding */
       }
       
       .header-container h1 {
-        font-size: 1.8em;
+        font-size: 1.8em; /* Matching mobile size */
       }
       
       .nav-links a {
-        font-size: 0.9em;
-      }
-      
-      .contact-button a {
-        padding: 10px 20px;
+        font-size: 0.9em; /* Matching mobile nav links */
       }
     }
   </style>
@@ -332,7 +347,7 @@
         </div>
       </div>
       
-      <!-- Section with Text Description -->
+      <!-- About Section -->
       <section class="about-photographer">
         <h2>Welcome to Little Juneberry Photography</h2>
         <p>I'm Allie, a photographer based in Minnesota and Wisconsin, specializing in Weddings, Engagements, Family, and Special Occasions.</p>

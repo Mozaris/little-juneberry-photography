@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Little Juneberry Ensembles</title>
+</head>
+<body>
+    <h2>Contact</h2>
+    <div class="contact-info">
+        <p>Email: <a href="mailto:Allie_Tatarek@Hotmail.com">Allie_Tatarek@Hotmail.com</a></p>
+        <p><a href="https://www.instagram.com/littlejuneberryphotography/">Instagram</a></p>
+        <p><a href="https://www.facebook.com/profile.php?id=100094520224957&mibextid=LQQJ4d">Facebook</a></p>
+    </div>
+</body>
+</html>
