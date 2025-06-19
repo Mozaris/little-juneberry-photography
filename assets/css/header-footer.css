@@ -1,0 +1,291 @@
+/* Shared Header and Footer Styles - Consistent across all pages */
+/* Higher specificity to override page-specific styles */
+
+/* CSS Variables for consistency - using !important to override page-specific variables */
+:root {
+  --primary-color: #48503a !important;
+  --secondary-color: #6b7753 !important;
+  --background-color: #c2b59e !important;   /* Warm Taupe for Body */
+  --container-bg: #e2d4c3 !important;       /* Light Taupe for Containers */
+  --text-color: #333 !important;
+  --transition-speed: 0.3s !important;
+  --border-radius: 10px !important;
+}
+
+/* Font Face */
+@font-face {
+  font-family: 'Signatura Monoline Script';
+  src: url('../fonts/SignaturaMonolineScript.ttf/Signatura Monoline.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+
+a:hover, a:focus {
+  color: var(--secondary-color);
+}
+
+/* Use custom font for main headlines */
+h1, h2, .headline {
+  font-family: 'Signatura Monoline Script', cursive;
+}
+
+/* ===== HEADER STYLES ===== */
+/* Higher specificity selectors to override page-specific styles */
+body header[role="banner"],
+body header {
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)) !important;
+  padding: 20px !important;
+  text-align: center !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
+}
+
+body .header-container {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+}
+
+body .header-container h1 {
+  font-family: 'Signatura Monoline Script', cursive !important;
+  font-size: 2.8em !important;
+  color: white !important;
+  margin: 0 !important;
+}
+
+body .nav-links {
+  list-style: none !important;
+  display: flex !important;
+  justify-content: center !important;
+  gap: 20px !important;
+  margin-top: 10px !important;
+  padding: 0 !important;
+}
+
+body .nav-links a {
+  font-size: 1em !important;
+  padding: 8px 12px !important;
+  border-bottom: 2px solid transparent !important;
+  color: white !important;
+  transition: color var(--transition-speed), border-bottom var(--transition-speed) !important;
+}
+
+body .nav-links a:hover,
+body .nav-links a:focus {
+  color: var(--secondary-color) !important;
+  border-bottom: 2px solid var(--secondary-color) !important;
+}
+
+body .nav-links a[aria-current="page"] {
+  border-bottom: 2px solid white !important;
+  font-weight: bold !important;
+}
+
+/* Dropdown Styles */
+body .dropdown {
+  position: relative !important;
+}
+
+body .dropdown-content {
+  display: none !important;
+  position: absolute !important;
+  background: var(--primary-color) !important;
+  min-width: 160px !important;
+  border-radius: var(--border-radius) !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3) !important;
+  padding: 10px 0 !important;
+  z-index: 1000 !important;
+  top: 100% !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
+body .dropdown-content a {
+  display: block !important;
+  padding: 8px 16px !important;
+  color: white !important;
+  transition: color var(--transition-speed), background-color var(--transition-speed) !important;
+  border-bottom: none !important;
+}
+
+body .dropdown-content a:hover,
+body .dropdown-content a:focus {
+  color: var(--secondary-color) !important;
+  background-color: rgba(255,255,255,0.1) !important;
+}
+
+body .dropdown:hover .dropdown-content,
+body .dropdown-content[style*="block"] {
+  display: block !important;
+}
+
+/* Separator */
+body .separator-horizontal {
+  height: 2px !important;
+  background: linear-gradient(to right, transparent, white, transparent) !important;
+  margin-top: 10px !important;
+}
+
+/* ===== FOOTER STYLES ===== */
+body footer {
+  background: var(--primary-color) !important;
+  color: white !important;
+  padding: 30px 20px !important;
+  text-align: center !important;
+  margin-top: 40px !important;
+}
+
+body .footer-content {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+}
+
+body .footer-content .tagline {
+  font-size: 1.1em !important;
+  margin-bottom: 20px !important;
+  flex: 1 1 100% !important;
+  text-align: center !important;
+  font-weight: 500 !important;
+}
+
+body .social-icons {
+  display: flex !important;
+  gap: 20px !important;
+  justify-content: center !important;
+  margin-bottom: 20px !important;
+}
+
+body .social-icons a {
+  color: white !important;
+  font-size: 1.8em !important;
+  transition: color var(--transition-speed), transform var(--transition-speed) !important;
+}
+
+body .social-icons a:hover,
+body .social-icons a:focus {
+  color: var(--secondary-color) !important;
+  transform: scale(1.1) !important;
+}
+
+body .footer-bottom {
+  text-align: center !important;
+  font-size: 0.9em !important;
+  border-top: 1px solid var(--secondary-color) !important;
+  padding-top: 15px !important;
+  width: 100% !important;
+  margin-top: 15px !important;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .header-container h1 {
+    font-size: 2.2em;
+  }
+  
+  .nav-links {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .nav-links a {
+    font-size: 0.9em;
+    padding: 10px 12px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .dropdown-content {
+    min-width: 140px;
+  }
+  
+  header {
+    padding: 15px;
+  }
+  
+  .social-icons {
+    gap: 15px;
+  }
+  
+  .social-icons a {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container h1 {
+    font-size: 1.8em;
+  }
+  
+  .nav-links {
+    gap: 8px;
+  }
+  
+  .nav-links a {
+    font-size: 0.85em;
+    padding: 12px 8px;
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .dropdown-content {
+    min-width: 120px;
+  }
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Active state for navigation */
+.nav-links a.active {
+  border-bottom: 2px solid white;
+  font-weight: bold;
+}
+
+/* Focus styles for accessibility */
+.nav-links a:focus,
+.dropdown-content a:focus,
+.social-icons a:focus {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+/* Ensure dropdown works with JavaScript */
+.dropdown-content[aria-expanded="true"] {
+  display: block;
+}

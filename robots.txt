@@ -1,0 +1,35 @@
+# Robots.txt for Little Juneberry Photography
+# https://www.littlejuneberryphotography.com/robots.txt
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /*.pdf$
+Disallow: /*?*
+Disallow: /assets/icons/
+Allow: /assets/images/
+Allow: /assets/css/
+Allow: /assets/js/
+
+# Specific bot instructions
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: facebookexternalhit
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.littlejuneberryphotography.com/sitemap.xml
+
+# Prevent indexing of development files
+Disallow: /*.log$
+Disallow: /*.txt$
+Disallow: /dev-helper.ps1
+Disallow: /docs/
