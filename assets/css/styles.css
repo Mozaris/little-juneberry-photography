@@ -1891,6 +1891,19 @@ footer {
     margin-bottom: 0.8rem;
     break-inside: avoid;
   }
+
+  /* Recent Work Gallery - Small Mobile */
+  .image-gallery {
+    columns: 1;
+    column-gap: 0.8rem;
+  }
+  
+  .image-gallery img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.8rem;
+    break-inside: avoid;
+  }
   
   /* Ensure all interactive elements are touch-friendly */
   a, button, input, textarea, select {
