@@ -958,6 +958,37 @@ footer {
   transform: scale(1.05);
 }
 
+/* Mobile styles for wedding gallery */
+@media (max-width: 768px) {
+  .wedding-gallery .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+    .wedding-gallery .gallery-grid img {
+    height: 150px;
+  }
+    /* Adjust cropping for right column images (2nd and 4th images) */
+  .wedding-gallery .gallery-grid img:nth-child(2),
+  .wedding-gallery .gallery-grid img:nth-child(4) {
+    object-position: center 25%;
+  }
+}
+
+@media (max-width: 480px) {
+  .wedding-gallery .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .wedding-gallery .gallery-grid img {
+    height: 120px;  }
+    /* Adjust cropping for right column images (2nd and 4th images) */
+  .wedding-gallery .gallery-grid img:nth-child(2),
+  .wedding-gallery .gallery-grid img:nth-child(4) {
+    object-position: center 25%;
+  }
+}
+
 .service-packages {
   margin: 3rem 0;
 }
@@ -1600,5 +1631,73 @@ footer {
   
   .family-gallery img {
     height: 180px;
+  }
+}
+
+/* ===== MOBILE HEADER RESPONSIVE STYLES ===== */
+@media (max-width: 768px) {
+  .header-container h1 {
+    font-size: 2.2em;
+    line-height: 1.2;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .nav-links a {
+    font-size: 0.9em;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 15px 10px;
+  }
+  
+  .header-container h1 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+    line-height: 1.1;
+  }
+  
+  .nav-links {
+    gap: 8px;
+    margin-top: 15px;
+  }
+  
+  .nav-links a {
+    font-size: 0.85em;
+    padding: 5px 8px;
+  }
+  
+  .dropdown-content {
+    min-width: 160px;
+    font-size: 0.9em;
+  }
+  
+  .separator-horizontal {
+    width: 90%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .header-container h1 {
+    font-size: 1.6em;
+  }
+  
+  .nav-links {
+    gap: 6px;
+  }
+  
+  .nav-links a {
+    font-size: 0.8em;
+    padding: 4px 6px;
   }
 }
