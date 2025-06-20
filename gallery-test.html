@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recent Work Gallery Test</title>
+    <style>
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+            padding: 20px;
+            border: 2px solid blue;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ccc;
+        }
+
+        /* Medium mobile */
+        @media (max-width: 768px) {
+            .image-gallery {
+                display: block;
+                columns: 2;
+                column-gap: 1rem;
+                border-color: green;
+            }
+            .image-gallery img {
+                width: 100%;
+                height: auto;
+                margin-bottom: 0.8rem;
+                break-inside: avoid;
+                display: block;
+            }
+        }
+
+        /* Small mobile - NEW FIX */
+        @media (max-width: 500px) {
+            .image-gallery {
+                columns: 1;
+                column-gap: 0.8rem;
+                border-color: red;
+            }
+            .image-gallery img {
+                width: 100%;
+                height: auto;
+                margin-bottom: 0.8rem;
+                break-inside: avoid;
+            }
+        }
+
+        .test-info {
+            padding: 20px;
+            background: #f0f0f0;
+            margin: 20px;
+            border-radius: 8px;
+        }
+
+        .mobile-only-image {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-only-image {
+                display: block !important;
+                border: 3px solid orange;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="test-info">
+        <h1>Recent Work Gallery Test</h1>
+        <p><strong>Screen width:</strong> <span id="width"></span>px</p>
+        <p><strong>Expected behavior:</strong></p>
+        <ul>
+            <li><strong>Desktop (>768px):</strong> Blue border, grid layout</li>
+            <li><strong>Medium mobile (501-768px):</strong> Green border, 2 columns</li>
+            <li><strong>Small mobile (≤500px):</strong> Red border, 1 column (NEW FIX)</li>
+            <li><strong>Mobile-only image:</strong> Orange border on mobile only</li>
+        </ul>
+    </div>
+
+    <div class="image-gallery">
+        <img src="assets/images/portfolio/Portfolio45.jpg" alt="1. Wedding photography">
+        <img src="assets/images/portfolio/Portfolio47.jpg" alt="2. Family portrait">
+        <img src="assets/images/portfolio/Portfolio49.jpg" alt="3. Engagement session">
+        <img src="assets/images/portfolio/Portfolio48.jpg" alt="4. Special occasion (THE MISSING ONE)">
+        <img src="assets/images/portfolio/Portfolio53.jpg" alt="5. Portrait photography">
+        <img src="assets/images/portfolio/Portfolio52.jpg" alt="6. Mobile-only image" class="mobile-only-image">
+    </div>
+
+    <script>
+        function updateWidth() {
+            document.getElementById('width').textContent = window.innerWidth;
+        }
+        window.addEventListener('resize', updateWidth);
+        updateWidth();
+        
+        // Add image load error handling
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('error', function() {
+                this.style.border = '3px solid red';
+                this.style.background = '#ffeeee';
+                this.alt = this.alt + ' (FAILED TO LOAD)';
+            });
+        });
+    </script>
+</body>
+</html>

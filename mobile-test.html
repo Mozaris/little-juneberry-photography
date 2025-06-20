@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Image Test</title>
+    <style>
+        .mobile-only-image {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-only-image {
+                display: block !important;
+                width: 100%;
+                height: auto;
+                margin-bottom: 0.8rem;
+                break-inside: avoid;
+                border: 2px solid red; /* Test border to make it obvious */
+            }
+        }
+
+        .test-info {
+            padding: 20px;
+            background: #f0f0f0;
+            margin: 20px;
+            border-radius: 8px;
+        }
+
+        .regular-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-info">
+        <h1>Mobile-Only Image Test</h1>
+        <p><strong>Instructions:</strong> Resize your browser window to less than 768px width (or view on mobile) to see the mobile-only image appear.</p>
+        <p><strong>Current screen width:</strong> <span id="width"></span>px</p>
+    </div>
+
+    <div style="padding: 20px;">
+        <h2>Regular Image (Always Visible)</h2>
+        <img src="assets/images/portfolio/Portfolio45.jpg" alt="Regular image" class="regular-image">
+        
+        <h2>Mobile-Only Image (Only visible on screens ≤768px)</h2>
+        <img src="assets/images/portfolio/Portfolio52.jpg" alt="Mobile-only image" class="mobile-only-image">
+        
+        <div class="test-info">
+            <p><strong>Expected behavior:</strong></p>
+            <ul>
+                <li>On desktop (width > 768px): Only the regular image should be visible</li>
+                <li>On mobile (width ≤ 768px): Both images should be visible, with the mobile-only image having a red border</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function updateWidth() {
+            document.getElementById('width').textContent = window.innerWidth;
+        }
+        window.addEventListener('resize', updateWidth);
+        updateWidth();
+    </script>
+</body>
+</html>

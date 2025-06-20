@@ -1,15 +1,5 @@
 {
- "name": "Little Juneberry Photography",
- "short_name": "LJ Photography",
- "description": "Professional photography services in Minnesota and Wisconsin by Allie Eastwood. Specializing in weddings, engagements, family portraits, and special occasions.",
- "start_url": "/",
- "display": "standalone",
- "background_color": "#c2b59e",
- "theme_color": "#48503a",
- "orientation": "portrait-primary",
- "lang": "en-US",
- "scope": "/",
- "categories": ["photography", "business", "lifestyle"],
+ "name": "App",
  "icons": [
   {
    "src": "\/android-icon-36x36.png",
