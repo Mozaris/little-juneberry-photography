@@ -1892,16 +1892,16 @@ footer {
     break-inside: avoid;
   }
 
-  /* Recent Work Gallery - Small Mobile */
+  /* Recent Work Gallery - Keep 2 columns on small mobile */
   .image-gallery {
-    columns: 1;
-    column-gap: 0.8rem;
+    columns: 2;
+    column-gap: 0.5rem;
   }
   
   .image-gallery img {
     width: 100%;
     height: auto;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.5rem;
     break-inside: avoid;
   }
   
