@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Build / optimizer output
+dist/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+
+# Optional image backups created while editing
+assets/images/**/backup-*/
