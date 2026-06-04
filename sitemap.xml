@@ -4,29 +4,29 @@
 
   <url>
     <loc>https://littlejuneberryphotography.com/</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://littlejuneberryphotography.com/assets/images/portfolio/Portfolio4.jpg</image:loc>
+      <image:loc>https://littlejuneberryphotography.com/assets/images/homepage.jpg</image:loc>
       <image:title>Duluth &amp; Superior Wedding Photographer, Little Juneberry Photography</image:title>
     </image:image>
   </url>
 
   <url>
     <loc>https://littlejuneberryphotography.com/portfolio.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://littlejuneberryphotography.com/assets/images/portfolio/Portfolio43.jpg</image:loc>
+      <image:loc>https://littlejuneberryphotography.com/assets/images/portfolio/folio7.jpg</image:loc>
       <image:title>Wedding photography portfolio across Minnesota and Wisconsin</image:title>
     </image:image>
   </url>
 
   <url>
     <loc>https://littlejuneberryphotography.com/about.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -37,7 +37,7 @@
 
   <url>
     <loc>https://littlejuneberryphotography.com/contact.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>

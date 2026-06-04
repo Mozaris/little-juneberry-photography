@@ -24,7 +24,9 @@ Static HTML site hosted free on **GitHub Pages** at **littlejuneberryphotography
   **meta-refresh redirect stubs** that send old/bookmarked URLs to the right new page. Keep them.
 - `assets/css/styles.css` — single stylesheet. Design tokens live in `:root` at the top.
 - `assets/js/main.js` — nav, scroll-reveal, FAQ accordion, back-to-top, portfolio filter + lightbox.
-- `assets/images/{portfolio,wedding,about}` — photos. `assets/icons` — favicons.
+- `assets/images/portfolio/folio1.jpg`..`folio63.jpg` — the portfolio gallery, shown in
+  numeric order. `assets/images/homepage.jpg` — home hero. `assets/images/about` — Allie's photo.
+  `assets/icons` — favicons. (The portfolio is a single ordered gallery; there are no category filters.)
 
 ## Conventions and rules (important)
 - **No em dashes** anywhere in copy. The owner considers them an AI giveaway. Use commas,
