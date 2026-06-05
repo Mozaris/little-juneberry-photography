@@ -247,6 +247,10 @@ section { padding-block: clamp(3.5rem, 8vw, 7rem); }
   .nav__list { flex-direction: column; gap: 0; width: 100%; }
   .nav__list li { width: 100%; text-align: center; }
   .nav__link { display: block; color: var(--white); padding: 1.1rem 0; font-size: 0.95rem; border-bottom: 1px solid rgba(255,255,255,0.12); }
+  /* Drawer links must stay white even on solid/scrolled headers (olive-on-olive was invisible) */
+  .site-header .nav__link,
+  .site-header.header--solid .nav__link,
+  .site-header.is-scrolled .nav__link { color: var(--white); }
   .nav__link::after { display: none; }
   .nav .btn { margin-top: 1.5rem; }
   body.nav-open { overflow: hidden; }
