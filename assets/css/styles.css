@@ -302,9 +302,13 @@ section { padding-block: clamp(3.5rem, 8vw, 7rem); }
 .page-hero h1 { color: var(--white); }
 .page-hero h1 .script { display:block; color: var(--white); font-size: 1.1em; }
 .page-hero p { color: rgba(255,255,255,0.9); max-width: 600px; margin: 1rem auto 0; }
-/* Taller banner variant (used when the hero image is a portrait detail shot,
-   so more of the photo shows and stays recognizable instead of zooming in) */
-.page-hero--tall { min-height: 82vh; display: flex; flex-direction: column; justify-content: flex-start; }
+
+/* Banner that shows a whole (portrait) photo: the full image is "contained" and
+   centered, with a blurred copy filling the rest of the banner. Text sits low. */
+.page-hero--contain { min-height: 86vh; display: flex; flex-direction: column; justify-content: flex-end; }
+.page-hero__bg { position: absolute; inset: 0; z-index: -3; background-size: cover; background-position: center; filter: blur(30px) brightness(0.62); transform: scale(1.15); }
+.page-hero--contain .page-hero__media img { object-fit: contain; }
+.page-hero--contain::after { background: linear-gradient(to top, rgba(48,53,40,0.9) 0%, rgba(48,53,40,0.15) 45%, rgba(48,53,40,0.05) 100%); }
 
 /* =============================================================
    HOME / INTRO
