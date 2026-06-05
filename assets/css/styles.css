@@ -290,6 +290,11 @@ section { padding-block: clamp(3.5rem, 8vw, 7rem); }
 }
 .hero__scroll span { display: block; width: 1px; height: 36px; background: rgba(255,255,255,0.6); animation: scrollPulse 2s var(--ease) infinite; }
 @keyframes scrollPulse { 0%,100%{ transform: scaleY(0.4); opacity: 0.4; transform-origin: top;} 50%{ transform: scaleY(1); opacity: 1;} }
+/* Mobile only: the wide hero photo is center-cropped to a tall slice, which pushes
+   the couple to the right edge. Shift the crop so they stay centered. Desktop is unchanged. */
+@media (max-width: 768px) {
+  .hero__media img { object-position: 70% center; }
+}
 
 /* Compact page hero (interior pages) */
 .page-hero {
